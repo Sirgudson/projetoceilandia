@@ -1,12 +1,21 @@
-.titulo{
+.apresentacao{
     font-family: 'Raleway';
+    flex-direction: column;
     color: #FFFFFF;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 456px;
-    font-weight: 400;
+    height: 405px;
+    font-weight: 300;
+    font-size: 5px;
+}
+.titulo{
+    margin-top: 0%;
     font-size: 75px;
+}
+
+.subtitulo{
+    margin-bottom: 0%;
 }
 
 .flex-container{

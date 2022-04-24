@@ -18,8 +18,13 @@
         <div><a href="#">Contato</a></div>
         <div><a href="#">Passeios</a></div>
     </div>
+    <div class="apresentacao">
+        <h2 class="subtitulo">
+            <img src="/ASSETS/IMAGES/onda1.png" alt="">BE MY GUEST<img src="/ASSETS/IMAGES/onda2.png" alt="">
+        </h2><br>
+        <h1 class="titulo">Bem-vindo a Ceilândia</h1>
+    </div>
 
-    <h1 class="titulo">Bem-vindo a Ceilândia</h1>
 </body>
 
 </html>
