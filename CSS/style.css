@@ -37,6 +37,11 @@ body{
 }
 
 @media (max-width: 576px) {
+    html{
+        background-image: url(../ASSETS/IMAGES/background-mobile.png);
+        background-position: top;;
+        background-size: auto;       
+    }
     .flex-container {
         display: flex;
         justify-content: left;
@@ -44,13 +49,18 @@ body{
     .apresentacao{
         display: flex;
         flex-wrap: wrap;
+        height: 285px;
     }
     .subtitulo{
         display: contents;
+        font-size: medium;
+    }
+    img{
+        height: 10%;
     }
     .titulo{
         font-size: 55px;
-        font-weight: 300;
+        font-weight: 400;
         text-align: center;
     }
     body{
