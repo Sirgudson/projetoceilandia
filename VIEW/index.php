@@ -12,10 +12,10 @@
 
 <body>
     <div class="flex-container mt-4">
-        <div><a href="#">Início</a></div>
-        <div><a href="#">História</a></div>
-        <div><a href="#">Pontos Turísticos</a></div>
-        <div><a href="#">Contato</a></div>
+        <div class="d-none d-sm-block"><a href="#">Início</a></div>
+        <div class="d-none d-sm-block"><a href="#">História</a></div>
+        <div class="d-none d-sm-block"><a href="#">Pontos Turísticos</a></div>
+        <div class="d-none d-sm-block"><a href="#">Contato</a></div>
         <div><a href="#">Passeios</a></div>
     </div>
     <div class="apresentacao">
