@@ -1,4 +1,30 @@
-h1{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color: blueviolet;
+.titulo{
+    font-family: 'Raleway';
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 456px;
+    font-weight: 400;
+    font-size: 75px;
+}
+
+.flex-container{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+body{
+    background-image: url(../ASSETS/IMAGES/background.jpeg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding: 25px;
+}
+
+.flex-container > div > a {
+    font-family: 'Raleway';
+    font-style: normal;
+    color: #FFFFFF;
+    text-decoration: none;
 }
