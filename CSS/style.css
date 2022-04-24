@@ -36,6 +36,43 @@ body{
 
 }
 
+    .menu{
+        margin-block-end: auto;
+        margin-left: 230px;
+    }
+
+.flex-container > div > a {
+    font-family: 'Raleway';
+    font-style: normal;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+.cultura{
+    display: grid;
+    height: 367px;
+    background-color: #FFFFFF;
+    width: 1300px;
+    margin: auto;
+}
+h3, h4{
+    display: flex;
+    justify-content: center;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+
+}
+h3{
+    font-size: 45px;
+    line-height: 53px;
+    margin-top: 50px !important;
+}
+
+h4{
+    font-size: 32px;
+    line-height: 38px;
+}
+
 @media (max-width: 576px) {
     html{
         background-image: url(../ASSETS/IMAGES/background-mobile.png);
@@ -70,11 +107,4 @@ body{
         background-position: center top;
         min-height: 100%;
     }
-  }
-
-.flex-container > div > a {
-    font-family: 'Raleway';
-    font-style: normal;
-    color: #FFFFFF;
-    text-decoration: none;
 }

@@ -17,14 +17,26 @@
         <div class="d-none d-sm-block"><a href="#">Pontos Turísticos</a></div>
         <div class="d-none d-sm-block"><a href="#">Contato</a></div>
         <div><a href="#">Passeios</a></div>
+        <div class="menu d-block d-sm-none">
+            <img src="/ASSETS/SVG/menu.svg" alt="menu">
+        </div>
     </div>
     <div class="apresentacao">
         <h2 class="subtitulo">
-            <img src="/ASSETS/IMAGES/onda1.png" alt="">BE MY GUEST<img src="/ASSETS/IMAGES/onda2.png" alt="">
+            <img src="/ASSETS/IMAGES/onda1.png" alt="onda1">BE MY GUEST<img src="/ASSETS/IMAGES/onda2.png" alt="onda2">
         </h2><br>
         <h1 class="titulo">Bem-vindo a Ceilândia</h1>
     </div>
-
+    <div class="cultura">
+        <h3>Conheça melhor nossa cultura</h3>
+        <h4>A Região Administrativa de Ceilândia, é uma das mais populosas RAs,<br>       possuindo um forte comércio com tradição nordestina.</h4>        
+    </div>
+    <div class="grid-container">
+        <div class="historia">A história</div>
+        <img src="/ASSETS/IMAGES/letreiro.png" alt="letreiro-ceilandia">
+        <img src="/ASSETS/IMAGES/bandeira.png" alt="bandeira-ceilandia">
+        <div class="agendar">Venha conhecer um pouco mais da região mais amada do quadradinho, com eventos e passeios para toda família.</div>
+    </div>
 </body>
 
 </html>
