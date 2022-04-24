@@ -59,18 +59,31 @@ h3, h4{
     justify-content: center;
     font-family: 'Raleway';
     font-style: normal;
-    font-weight: 400;
-
 }
 h3{
     font-size: 45px;
     line-height: 53px;
     margin-top: 50px !important;
+    font-weight: 400 !important;
 }
 
 h4{
     font-size: 32px;
     line-height: 38px;
+    font-weight: 300 !important;
+}
+
+.grid-container{
+    width: 1300px;
+    display: grid;
+    grid-template-columns: 300px 805px;
+    margin: auto;
+}
+
+.historia{
+    background: #61C5F0;
+    width: 300px;
+    height: 468px;
 }
 
 @media (max-width: 576px) {
