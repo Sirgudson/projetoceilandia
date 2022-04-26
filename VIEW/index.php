@@ -28,19 +28,48 @@
         <h1 class="titulo">Bem-vindo a Ceilândia</h1>
     </div>
     <div class="container2">
-    <div class="cultura">
-        <h3 class="text-cultura1">Conheça melhor nossa cultura</h3>
-        <img src="/ASSETS/IMAGES/separador-laranja.png" alt="separador laranja" class="separador">
-        <h4 class="text-cultura2">A Região Administrativa de Ceilândia, é uma das mais populosas RAs, possuindo um forte comércio com tradição nordestina.</h4>        
-    </div>
-    <div class="grid-container">
-        <div class="historia">
-            <p class="texto-historia">A História</p>
+        <div class="cultura1">
+            <h3 class="text-cultura1">Conheça melhor nossa cultura</h3>
+            <img src="/ASSETS/IMAGES/separador-laranja.png" alt="separador laranja" class="separador1">
         </div>
-        <img src="/ASSETS/IMAGES/letreiro.png" alt="letreiro-ceilandia" class="img-esquerdo">
-        <img src="/ASSETS/IMAGES/bandeira.png" alt="bandeira-ceilandia">
-        <div class="agendar">Venha conhecer um pouco mais da região mais amada do quadradinho, com eventos e passeios para toda família.</div>
-    </div>
+
+        <div class="cultura2">
+            <h4 class="text-cultura2">A Região Administrativa de Ceilândia, é uma das mais populosas RAs, possuindo um forte comércio com tradição nordestina.</h4>
+        </div>
+        <div class="historia">
+            <div class="historia1">
+                <p class="texto-historia">A História</p>
+                <img src="/ASSETS/IMAGES/separador-laranja.png" alt="separador laranja" class="separador2">
+            </div>
+            <div class="historia2">
+                <img src="/ASSETS/IMAGES/letreiro.png" alt="letreiro-ceilandia" class="img-retangulo">
+            </div>
+            <div class="historia3">
+                <img src="/ASSETS/IMAGES/bandeira.png" alt="bandeira-ceilandia" class="img-esquerdo">
+            </div>
+            <div class="historia4">
+                <p>Venha conhecer um pouco mais da região mais amada do quadradinho, com eventos e passeios para toda família.</p>
+                <img src="/ASSETS/IMAGES/separador-laranja.png" alt="separador laranja" class="separador3">
+                <a href="#">AGENDAR</a>
+            </div>
+        </div>
+
+        <div class="localizacao">
+            <div class="localizacao1">
+                <img src="/ASSETS/IMAGES/mapa-ceilandia.png" alt="letreiro-ceilandia" class="img-retangulo">
+            </div>
+            <div class="localizacao2">
+                <p class="oi">Localização</p>
+                <img src="/ASSETS/IMAGES/separador-laranja.png" alt="separador laranja" class="separador4">
+            </div>
+        </div>
+        <div class="texto-localizacao">
+            <p>Ceilândia a maior região administrativa do Distrito Federal, possui uma área de 230,3 km². Fica proxima de Taguatinga e Samabaia.</p>
+        </div>
+        <div class="item6">6</div>
+        <div class="item7">7</div>
+        <div class="item8">8</div>
+        <div class="item9">9</div>
     </div>
 </body>
 

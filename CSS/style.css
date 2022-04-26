@@ -14,7 +14,7 @@ body{
 .apresentacao{
     font-family: 'Raleway';
     flex-direction: column;
-    color: #FFFFFF;
+    color: #EFF0F4;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -49,17 +49,34 @@ body{
 .flex-container > div > a {
     font-family: 'Raleway';
     font-style: normal;
-    color: #FFFFFF;
+    color: #EFF0F4;
     text-decoration: none;
 }
-.cultura{
+
+.container2{
     display: grid;
-    height: 367px;
-    background-color: #FFFFFF;
+    grid-template-areas: "cultura1" "cultura2" "historia" "localizacao";
+}
+
+.cultura1{
+    display: grid;
+    height: 160px;
+    background-color: #EFF0F4;
     width: 1300px;
     margin: auto;
-    margin-top: 180px;
+    margin-top: 170px;
+    grid-area: cultura1;
 }
+
+.cultura2{
+    display: grid;
+    height: 190px;
+    background-color: #EFF0F4;
+    width: 1300px;
+    margin: auto;
+    grid-area: cultura2;
+}
+
 h3, h4{
     display: flex;
     justify-content: center;
@@ -80,42 +97,143 @@ h4{
 
 h3.text-cultura1{
     font-size: 38px;
+    margin-bottom: 22px;
 }
 
 h4.text-cultura2{
     padding: 0 132px;
     text-align: center;
     font-size: 22px;
+    margin-top: 32px;
 }
 
-.separador {
+.separador1 {
     margin-bottom: 10%;
-    padding-left: 620px;
+    padding-left: 630px;
 }
 
-.grid-container{
+/*.grid-container{
     width: 1300px;
     display: grid;
     grid-template-columns: 300px 805px;
     margin: auto;
+}*/
+
+.historia {
+    width: 1300px;
+    display: grid;
+    grid-template-columns: 35% 65%;
+    margin: auto;
+    grid-area: historia;
 }
 
-.historia{
+.historia1{
     background: #61C5F0;
-    width: 575px;
-    height: 468px;
+    position: relative
 }
 
 .texto-historia {
-    float: left;
     font-family: 'Raleway', sans-serif;
-    color:#FFFFFF;
+    color:#EFF0F4;
     font-size: 62px;
-    padding: 150px;
+    margin: 0;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
 }
 
-.img-esquerdo{
-    margin-left: 280px;
+.separador2 {
+    padding-left: 186px;
+    padding-top: 220px;
+}
+
+.historia2{
+    background: #EFF0F4;
+}
+
+.historia4{
+    background: #EFF0F4;
+}
+
+.historia4 p {
+    font-family: 'Raleway', sans-serif;
+    color: #666161;
+    padding: 128px 146px 0;
+    text-align: center;
+    font-size: 22px;
+}
+
+.separador3 {
+    padding-left: 386px;
+}
+
+.historia4 a{
+    color: #26A999;
+    text-decoration: none;
+    position: absolute;
+    left: 40%;
+    padding: 60px;
+    font-size: 20px;
+}
+
+.localizacao {
+    width: 1300px;
+    height: 420px;
+    display: grid;
+    grid-template-columns: 65% 35%;
+    grid-area: localizacao;
+    margin: auto;
+    background-color: red;
+    margin-top: 5%;
+    position: relative
+}
+
+.localizacao1 {
+    background: #EFF0F4;
+}
+
+.localizacao2{
+    background: #61C5F0;
+}
+
+.localizacao2 p {
+    float: left;
+    padding: 120px 60px 0px 60px;
+    font-family: 'Raleway', sans-serif;
+    color: #EFF0F4;
+    font-size: 62px;
+}
+
+.texto-localizacao {
+    display: grid;
+    height: 420px;
+    background-color: #EFF0F4;
+    width: 1300px;
+    margin: auto;
+}
+
+.texto-localizacao p {
+    font-family: 'Raleway', sans-serif;
+    color: #666161;
+    padding: 128px 146px 0;
+    text-align: center;
+    font-size: 22px;
+}
+
+.separador4 {
+    padding-left: 184px;
+}
+
+.img-retangulo {
+    width: 845px;
+    height: 420px;
+}
+
+.img-esquerdo {
+    width: 460px;
+    height: 420px;
 }
 
 @media (max-width: 576px) {
