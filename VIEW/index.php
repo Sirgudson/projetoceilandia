@@ -27,15 +27,20 @@
         </h2><br>
         <h1 class="titulo">Bem-vindo a Ceilândia</h1>
     </div>
+    <div class="container2">
     <div class="cultura">
-        <h3>Conheça melhor nossa cultura</h3>
-        <h4>A Região Administrativa de Ceilândia, é uma das mais populosas RAs,<br>       possuindo um forte comércio com tradição nordestina.</h4>        
+        <h3 class="text-cultura1">Conheça melhor nossa cultura</h3>
+        <img src="/ASSETS/IMAGES/separador-laranja.png" alt="separador laranja" class="separador">
+        <h4 class="text-cultura2">A Região Administrativa de Ceilândia, é uma das mais populosas RAs, possuindo um forte comércio com tradição nordestina.</h4>        
     </div>
     <div class="grid-container">
-        <div class="historia">A história</div>
-        <img src="/ASSETS/IMAGES/letreiro.png" alt="letreiro-ceilandia">
+        <div class="historia">
+            <p class="texto-historia">A História</p>
+        </div>
+        <img src="/ASSETS/IMAGES/letreiro.png" alt="letreiro-ceilandia" class="img-esquerdo">
         <img src="/ASSETS/IMAGES/bandeira.png" alt="bandeira-ceilandia">
         <div class="agendar">Venha conhecer um pouco mais da região mais amada do quadradinho, com eventos e passeios para toda família.</div>
+    </div>
     </div>
 </body>
 
