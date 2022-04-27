@@ -56,6 +56,8 @@
         <div class="cultura2">
             <h4 class="text-cultura2">A Região Administrativa de Ceilândia, é uma das mais populosas RAs, possuindo um forte comércio com tradição nordestina.</h4>
         </div>
+
+        <!-- HISTÓRIA -->
         <div class="historia">
             <div class="historia1">
                 <p class="texto-historia">A História</p>
@@ -74,6 +76,7 @@
             </div>
         </div>
 
+        <!-- LOCALIZAÇÃO -->
         <div class="localizacao">
             <div class="localizacao1">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d61413.1759978935!2d-48.223059733050334!3d-15.839585881972654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935bceef0979b2ab%3A0xcca29259f34367e5!2zQ2VpbMOibmRpYSwgQnJhc8OtbGlhIC0gREY!5e0!3m2!1spt-BR!2sbr!4v1651083238415!5m2!1spt-BR!2sbr" width="845" height="420" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -87,9 +90,11 @@
         <div class="texto-localizacao">
             <p>Ceilândia a maior região administrativa do Distrito Federal, possui uma área de 230,3 km². Fica proxima de Taguatinga e Samabaia.</p>
         </div>
+
+        <!-- QUEM SOMOS NÓS -->
         <div class="equipe">
             <div class="equipe1">
-            <img src="/ASSETS/IMAGES/equipe.jpeg" alt="foto dos criadores" class="img-quadrado">
+                <img src="/ASSETS/IMAGES/equipe.jpeg" alt="foto dos criadores" class="img-quadrado">
             </div>
             <div class="equipe2">
                 <p class="titulo-equipe2">Sobre Nós :)</p>
@@ -103,6 +108,8 @@
         <div class="item8">8</div>
         <div class="item9">9</div>
     </div>
+
+    <!-- FOOTER -->
 </body>
 
 </html>
