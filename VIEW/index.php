@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/CSS/style.css">
-    <link rel="stylesheet" href="/LIB/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../LIB/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
     <title>Projeto Ceilândia</title>
 </head>
@@ -19,7 +19,7 @@
         <div class="d-none d-sm-block"><a href="#">Contato</a></div>
         <div><a href="#">Passeios</a></div>
         <div class="menu d-block d-sm-none">
-            <img src="/ASSETS/SVG/menu.svg" alt="menu">
+            <img src="../ASSETS/SVG/menu.svg" alt="menu">
         </div>
     </div>
 
@@ -43,14 +43,14 @@
 
     <div class="apresentacao">
         <h2 class="subtitulo">
-            <img src="/ASSETS/IMAGES/onda1.png" alt="onda1">BE MY GUEST<img src="/ASSETS/IMAGES/onda2.png" alt="onda2">
+            <img src="../ASSETS/IMAGES/onda1.png" alt="onda1">BE MY GUEST<img src="../ASSETS/IMAGES/onda2.png" alt="onda2">
         </h2><br>
         <h1 class="titulo">Bem-vindo a Ceilândia</h1>
     </div>
     <div class="container2">
         <div class="cultura1">
             <h3 class="text-cultura1">Conheça melhor nossa cultura</h3>
-            <img src="/ASSETS/IMAGES/separador-laranja.png" alt="separador laranja" class="separador1">
+            <img src="../ASSETS/IMAGES/separador-laranja.png" alt="separador laranja" class="separador1">
         </div>
 
         <div class="cultura2">
@@ -61,17 +61,17 @@
         <div class="historia">
             <div class="historia1">
                 <p class="texto-historia">A História</p>
-                <img src="/ASSETS/IMAGES/separador-laranja.png" alt="separador laranja" class="separador2">
+                <img src="../ASSETS/IMAGES/separador-laranja.png" alt="separador laranja" class="separador2">
             </div>
             <div class="historia2">
-                <img src="/ASSETS/IMAGES/letreiro.png" alt="letreiro-ceilandia" class="img-retangulo">
+                <img src="../ASSETS/IMAGES/letreiro.png" alt="letreiro-ceilandia" class="img-retangulo">
             </div>
             <div class="historia3">
-                <img src="/ASSETS/IMAGES/bandeira.png" alt="bandeira-ceilandia" class="img-quadrado">
+                <img src="../ASSETS/IMAGES/bandeira.png" alt="bandeira-ceilandia" class="img-quadrado">
             </div>
             <div class="historia4">
                 <p>Venha conhecer um pouco mais da região mais amada do quadradinho, com eventos e passeios para toda família.</p>
-                <img src="/ASSETS/IMAGES/separador-laranja.png" alt="separador laranja" class="separador3">
+                <img src="../ASSETS/IMAGES/separador-laranja.png" alt="separador laranja" class="separador3">
                 <a href="#">AGENDAR</a>
             </div>
         </div>
@@ -83,7 +83,7 @@
             </div>
             <div class="localizacao2">
                 <p class="oi">Localização</p>
-                <img src="/ASSETS/IMAGES/separador-laranja.png" alt="separador laranja" class="separador4">
+                <img src="../ASSETS/IMAGES/separador-laranja.png" alt="separador laranja" class="separador4">
             </div>
         </div>
 
@@ -94,11 +94,11 @@
         <!-- QUEM SOMOS NÓS -->
         <div class="equipe">
             <div class="equipe1">
-                <img src="/ASSETS/IMAGES/equipe.jpeg" alt="foto dos criadores" class="img-quadrado">
+                <img src="../ASSETS/IMAGES/equipe.jpeg" alt="foto dos criadores" class="img-quadrado">
             </div>
             <div class="equipe2">
                 <p class="titulo-equipe2">Sobre Nós :)</p>
-                <img src="/ASSETS/IMAGES/separador-laranja.png" alt="separador laranja" class="separador5">
+                <img src="../ASSETS/IMAGES/separador-laranja.png" alt="separador laranja" class="separador5">
                 <p class="paragrafo-equipe">
                     Dhimylee, Marcelo e Nadir. Somos os criadores do Turismo Candango: Projeto Ceilndia. Amamos essa cidade ....
                 </p>
@@ -110,21 +110,21 @@
     <footer class="box-footer">
         <div class="flex-container2">
             <div class="logo redes">
-                <img src="/ASSETS/SVG/logo1.svg" alt="">
+                <img src="../ASSETS/SVG/logo1.svg" alt="">
             </div>
             <div class="redes">
                 <p>Siga-nos</p>
-                <img src="/ASSETS/IMAGES/separador-laranja.png" alt="separador laranja" class="separador6">
+                <img src="../ASSETS/IMAGES/separador-laranja.png" alt="separador laranja" class="separador6">
                 
                 <div class="img-footer">
-                    <img class="ico-svg" src="/ASSETS/SVG/facebook.svg" alt="icone facebook">
-                    <img class="ico-svg" src="/ASSETS/SVG/instagram.svg" alt="icone instagram">
-                    <img class="ico-svg" src="/ASSETS/SVG/twitter.svg" alt="icone twitter">
+                    <img class="ico-svg" src="../ASSETS/SVG/facebook.svg" alt="icone facebook">
+                    <img class="ico-svg" src="../ASSETS/SVG/instagram.svg" alt="icone instagram">
+                    <img class="ico-svg" src="../ASSETS/SVG/twitter.svg" alt="icone twitter">
                 </div>
             </div>
             <div class="novidade redes">
                 <p>Receba nossas novidades</p>
-                <img src="/ASSETS/IMAGES/separador-laranja.png" alt="separador laranja" class="separador6">
+                <img src="../ASSETS/IMAGES/separador-laranja.png" alt="separador laranja" class="separador6">
                 <div>
                 <input class="input-text" type="text" value="Insira seu e-mail aqui*"><br>
                 <input class="input-submit" type="submit" value="Participar">
