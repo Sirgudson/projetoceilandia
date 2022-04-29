@@ -42,9 +42,9 @@ body{
 
 }
 
-    .menu{
-        margin-block-end: auto;
-        margin-left: 230px;
+.menu{
+    margin-block-end: auto;
+    margin-left: 230px;
     }
 
 .flex-container > div > a {
@@ -360,16 +360,25 @@ h4.text-cultura2{
     html{
         background-image: url(../ASSETS/IMAGES/background-mobile.png);
         background-position: top;;
-        background-size: auto;       
+        background-size: 100%;       
     }
     .flex-container {
         display: flex;
         justify-content: left;
     }
+
+    .flex-container > div > a {
+        margin-left: 10px;
+    }
+
+    .menu {
+        margin-left: 400px;
+    }
+
     .apresentacao{
         display: flex;
         flex-wrap: wrap;
-        height: 285px;
+        height: 272px;
     }
     .subtitulo{
         display: contents;
@@ -389,5 +398,10 @@ h4.text-cultura2{
         background-attachment: fixed;
         background-position: center top;
         min-height: 100%;
+    }
+
+    .container2 {
+        display: flex;
+        flex-direction: column;
     }
 }
