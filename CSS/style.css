@@ -360,25 +360,27 @@ h4.text-cultura2{
     html{
         background-image: url(../ASSETS/IMAGES/background-mobile.png);
         background-position: top;;
-        background-size: 100%;       
+        background-size: auto;   
+        padding: 25px 0 25px 0;    
     }
+
     .flex-container {
         display: flex;
         justify-content: left;
     }
 
     .flex-container > div > a {
-        margin-left: 10px;
+        margin-left: 20px;
     }
 
     .menu {
-        margin-left: 400px;
+        margin-left: 360px;
     }
 
     .apresentacao{
         display: flex;
         flex-wrap: wrap;
-        height: 272px;
+        height: 268px;
     }
     .subtitulo{
         display: contents;
@@ -403,5 +405,23 @@ h4.text-cultura2{
     .container2 {
         display: flex;
         flex-direction: column;
+
+    }
+
+    .cultura1, .cultura2 {
+        width: 100%;
+        margin: 0;
+        margin-top: 0;
+    }
+
+    h3.text-cultura1{
+        font-size: 28px;
+        margin: 10px 70px;
+        text-align: center;
+    }
+
+    .separador1 {
+        margin-bottom: 50%;
+        padding-left: 170px;
     }
 }
