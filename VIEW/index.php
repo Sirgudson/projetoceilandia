@@ -12,34 +12,8 @@
 </head>
 
 <body>
-    <div class="flex-container mt-4">
-        <div class="d-none d-sm-block"><a href="#">Início</a></div>
-        <div class="d-none d-sm-block"><a href="#">História</a></div>
-        <div class="d-none d-sm-block"><a href="#">Pontos Turísticos</a></div>
-        <div class="d-none d-sm-block"><a href="#">Contato</a></div>
-        <div><a href="#">Passeios</a></div>
-        <div class="menu d-block d-sm-none">
-            <img src="../ASSETS/SVG/menu.svg" alt="menu">
-        </div>
-    </div>
-
-    <!-- Botão Whatsapp-->
-    <a href="https://wa.me/" style="
-         position: fixed;
-         width: 60px;
-         height: 60px;
-         bottom: 40px;
-         right: 30px;
-         background-color: #26A999;
-         color: #fff;
-         border-radius: 50px;
-         text-align: center;
-         font-size: 30px;
-         box-shadow: 1px 1px 2px #888;
-         z-index: 1000;
-         " target="_blank">
-        <i style="margin-top: 16px" class="fa fa-whatsapp"></i>
-    </a>
+    <!-- HEADER -->
+    <?php include('header.php') ?>
 
     <div class="apresentacao">
         <h2 class="subtitulo">
@@ -47,7 +21,7 @@
         </h2><br>
         <h1 class="titulo">Bem-vindo a Ceilândia</h1>
     </div>
-    <div class="container2">
+    <div class="container-index">
         <div class="cultura1">
             <h3 class="text-cultura1">Conheça melhor nossa cultura</h3>
             <img src="../ASSETS/IMAGES/separador-laranja.png" alt="separador laranja" class="separador1">
@@ -107,31 +81,7 @@
     </div>
 
     <!-- FOOTER -->
-    <footer class="box-footer">
-        <div class="flex-container2">
-            <div class="logo redes">
-                <img src="../ASSETS/SVG/logo1.svg" alt="">
-            </div>
-            <div class="redes">
-                <p>Siga-nos</p>
-                <img src="../ASSETS/IMAGES/separador-laranja.png" alt="separador laranja" class="separador6">
-                
-                <div class="img-footer">
-                    <img class="ico-svg" src="../ASSETS/SVG/facebook.svg" alt="icone facebook">
-                    <img class="ico-svg" src="../ASSETS/SVG/instagram.svg" alt="icone instagram">
-                    <img class="ico-svg" src="../ASSETS/SVG/twitter.svg" alt="icone twitter">
-                </div>
-            </div>
-            <div class="novidade redes">
-                <p>Receba nossas novidades</p>
-                <img src="../ASSETS/IMAGES/separador-laranja.png" alt="separador laranja" class="separador6">
-                <div>
-                <input class="input-text" type="text" value="Insira seu e-mail aqui*"><br>
-                <input class="input-submit" type="submit" value="Participar">
-                </div>
-            </div>
-        </div>
-    </footer>
+    <?php include('footer.php') ?>
     <p class="fim">2022 ©Todos os direitos Turismo Candango: Projeto Ceilândia</p>
 </body>
 
