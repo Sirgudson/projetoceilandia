@@ -7,8 +7,6 @@
 
 <body>
 
-    <h2>LOGIN</h2>
-
     <form action="/action_page.php" method="post">
         <div class="loginImage">
             <img src="../ASSETS/SVG/logo1.svg" alt="logo">
