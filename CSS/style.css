@@ -337,7 +337,6 @@ h4.text-cultura2{
     margin: 20px 15px 0; 
 }
 
-/* Login CSS Properties*/
 .input-text {
     width: 70%;
     height: 40px;
@@ -374,6 +373,7 @@ h4.text-cultura2{
 }
 /* ------ FIM DO FOOTER ------ */
 
+/* ------ LOGIN CSS PROPERTIES ------*/
 form {
     border: 3px solid #f1f1f1;
     background: #fffcfc;
@@ -426,6 +426,8 @@ span.psw {
   float: right;
   padding-top: 16px;
 }
+
+/* ------ FIM LOGIN CSS PROPERTIES ------*/
 
 /* Change styles for span and cancel button on extra small screens */
 @media screen and (max-width: 300px) {
