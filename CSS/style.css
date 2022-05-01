@@ -337,6 +337,7 @@ h4.text-cultura2{
     margin: 20px 15px 0; 
 }
 
+/* Login CSS Properties*/
 .input-text {
     width: 70%;
     height: 40px;
@@ -373,9 +374,12 @@ h4.text-cultura2{
 }
 /* ------ FIM DO FOOTER ------ */
 
-form {border: 3px solid #f1f1f1;}
+form {
+    border: 3px solid #f1f1f1;
+    background: #fffcfc;
+}
 
-input[type=text], input[type=password] {
+.container > input[type=text], input[type=password] {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
