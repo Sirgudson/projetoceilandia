@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 
 <head>
@@ -17,10 +16,10 @@
 
         <div class="container">
             <label for="uname"><b>Email</b></label>
-            <input type="text" placeholder="Seu email" name="email" required>
+            <input type="text" placeholder="Digite seu email" name="email" required>
 
             <label for="psw"><b>Senha</b></label>
-            <input type="password" placeholder="Sua senha" name="psw" required>
+            <input type="password" placeholder="Digite sua senha" name="psw" required>
 
             <button type="submit">Login</button>
             <label>
