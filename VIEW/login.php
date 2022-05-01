@@ -26,7 +26,7 @@
         </div>
 
         <div class="container" style="background-color:#f1f1f1">
-            <button type="button" class="cancelbtn">Cancelar</button>
+            <a href="../VIEW/index.php" class="cancelbtn">Cancelar</a>
             <span class="psw">Esqueceu a <a href="#">senha?</a></span>
         </div>
     </form>
