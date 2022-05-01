@@ -24,4 +24,4 @@
             </div>
         </div>
     </footer>
-    <p class="fim">2022 ©Todos os direitos Turismo Candango: Projeto Ceilândia</p>
+    <p class="fim">2022 &copy;Todos os direitos Turismo Candango: Projeto Ceilândia</p>
