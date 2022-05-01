@@ -65,7 +65,7 @@ body{
     background-color: #EFF0F4;
     width: 1300px;
     margin: auto;
-    margin-top: 15px;
+    margin-top: 2%;
     grid-area: cultura1;
 }
 
@@ -278,7 +278,7 @@ h4.text-cultura2{
 /* ------ PAGE HISTORIA ------ */
 .container-historia{
     display: grid;
-    grid-template-areas: box-history;
+    grid-template-areas: "box-history";
 }
 
 .box-history {
@@ -287,8 +287,15 @@ h4.text-cultura2{
     background-color: #EFF0F4;
     width: 1300px;
     margin: auto;
-    margin-top: 15px;
+    margin-top: 2%;
     grid-area: box-history;
+}
+
+.box-history h4{
+    padding: 0 12%;
+    text-align: center;
+    font-size: 22px;
+    margin-top: 4%;
 }
 
 /* ------ FOOTER ------ */
