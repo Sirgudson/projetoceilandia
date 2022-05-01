@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+
+<body>
+
+    <h2>LOGIN</h2>
+
+    <form action="/action_page.php" method="post">
+        <div class="loginImage">
+            <img src="../ASSETS/SVG/logo1.svg" alt="logo">
+        </div>
+
+        <div class="container">
+            <label for="uname"><b>Email</b></label>
+            <input type="text" placeholder="Seu email" name="email" required>
+
+            <label for="psw"><b>Senha</b></label>
+            <input type="password" placeholder="Sua senha" name="psw" required>
+
+            <button type="submit">Login</button>
+            <label>
+                <input type="checkbox" checked="checked" name="remember"> Lembrar login
+            </label>
+        </div>
+
+        <div class="container" style="background-color:#f1f1f1">
+            <button type="button" class="cancelbtn">Cancelar</button>
+            <span class="psw">Esqueceu a <a href="#">senha?</a></span>
+        </div>
+    </form>
+
+</body>
+
+</html>
