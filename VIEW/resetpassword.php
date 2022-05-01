@@ -15,19 +15,11 @@
         <div class="container">
             <label for="uname"><b>Email</b></label>
             <input type="text" placeholder="Digite seu email" name="email" required>
-
-            <label for="psw"><b>Senha</b></label>
-            <input type="password" placeholder="Digite sua senha" name="psw" required>
-
-            <button type="submit">Login</button>
-            <label>
-                <input type="checkbox" checked="checked" name="remember"> Lembrar login
-            </label>
         </div>
 
         <div class="container" style="background-color:#f1f1f1">
-            <a href="../VIEW/index.php" class="cancelbtn">Cancelar</a>
-            <span class="psw">Esqueceu a <a href="../VIEW/resetpassword.php">senha?</a></span>
+            <input type="submit" value="Enviar" id="enviar">
+            <a href="../VIEW/login.php" class="cancelbtn">Cancelar</a>
         </div>
     </form>
 
