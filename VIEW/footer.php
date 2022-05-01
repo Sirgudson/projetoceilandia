@@ -24,3 +24,4 @@
             </div>
         </div>
     </footer>
+    <p class="fim">2022 ©Todos os direitos Turismo Candango: Projeto Ceilândia</p>

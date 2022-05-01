@@ -50,11 +50,11 @@ body{
 .flex-container > div > a {
     font-family: 'Raleway';
     font-style: normal;
-    color: #EFF0F4;
+    color: #fafafb;
     text-decoration: none;
 }
 
-.container2{
+.container-index{
     display: grid;
     grid-template-areas: "cultura1" "cultura2" "historia" "localizacao" "texto-localizacao" "equipe";
 }
@@ -65,7 +65,7 @@ body{
     background-color: #EFF0F4;
     width: 1300px;
     margin: auto;
-    margin-top: 170px;
+    margin-top: 15px;
     grid-area: cultura1;
 }
 
@@ -129,7 +129,7 @@ h4.text-cultura2{
 }
 
 .historia1{
-    background: #61C5F0;
+    background: #32bcf8;
     position: relative
 }
 
@@ -197,7 +197,7 @@ h4.text-cultura2{
 }
 
 .localizacao2{
-    background: #61C5F0;
+    background: #32bcf8;
 }
 
 .localizacao2 p {
@@ -242,7 +242,7 @@ h4.text-cultura2{
 }
 
 .equipe2 {
-    background-color: #61C5F0;
+    background-color: #32bcf8;
 }
 
 .titulo-equipe2 {
@@ -275,7 +275,13 @@ h4.text-cultura2{
     height: 420px;
 }
 
-/* FOOTER */
+/* ------ PAGE HISTORIA ------ */
+.container-historia{
+    display: grid;
+    /*grid-template-areas: div;*/
+}
+
+/* ------ FOOTER ------ */
 .box-footer {
     width: 1300px;
     height: 360px;
@@ -402,7 +408,7 @@ h4.text-cultura2{
         min-height: 100%;
     }
 
-    .container2 {
+    .container-index {
         display: flex;
         flex-direction: column;
 
