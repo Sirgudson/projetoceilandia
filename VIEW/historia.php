@@ -21,7 +21,7 @@
     </div>
 
     <div class="container-historia">
-        <div class="">
+        <div class="box-history">
             
         </div>
     </div>

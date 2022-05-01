@@ -278,7 +278,17 @@ h4.text-cultura2{
 /* ------ PAGE HISTORIA ------ */
 .container-historia{
     display: grid;
-    /*grid-template-areas: div;*/
+    grid-template-areas: box-history;
+}
+
+.box-history {
+    display: grid;
+    height: 160px;
+    background-color: #EFF0F4;
+    width: 1300px;
+    margin: auto;
+    margin-top: 15px;
+    grid-area: box-history;
 }
 
 /* ------ FOOTER ------ */
@@ -361,6 +371,7 @@ h4.text-cultura2{
     color: #0000004f;
     font-size: 14px;
 }
+/* ------ FIM DO FOOTER ------ */
 
 form {border: 3px solid #f1f1f1;}
 
