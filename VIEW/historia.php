@@ -41,14 +41,14 @@
 
             </p>
         </div>
-        <!--<div class="container-compare">
+        <div class="container-compare">
             <div class="compare">
                 <div class="before">
                     <div class="after"></div>
                 </div>
                 <input type="range" min="0" max="640" step="10" id="compare-ip">
             </div>
-        </div>-->
+        </div>
     </div>
 
     <!-- FOOTER -->

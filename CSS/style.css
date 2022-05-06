@@ -52,6 +52,7 @@ body{
     font-style: normal;
     color: #fafafb;
     text-decoration: none;
+    text-shadow: 0 0 2px #000;
 }
 
 .container-index{
@@ -319,7 +320,7 @@ p.texto-box-history {
     grid-area: box-history2;
 }
 
-/*.container-compare {
+.container-compare {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -377,7 +378,7 @@ p.texto-box-history {
     background: #e25a5a;
     border: 1px solid #e25a5a;
     transition:all 300ms ease-in-out;
-}*/
+}
 
 /* ------ FOOTER ------ */
 .box-footer {
