@@ -278,16 +278,16 @@ h4.text-cultura2{
 /* ------ PAGE HISTORIA ------ */
 .container-historia{
     display: grid;
-    grid-template-areas: "box-history";
+    grid-template-areas: "box-history" "box-history2";
 }
 
 .box-history {
-    display: grid;
-    height: 250px;
-    background-color: #EFF0F4;
     width: 1300px;
+    height: 100%;
     margin: auto;
     margin-top: 2%;
+    padding-bottom: 80px;
+    background-color: #EFF0F4;
     grid-area: box-history;
 }
 
@@ -297,6 +297,87 @@ h4.text-cultura2{
     font-size: 22px;
     margin-top: 4%;
 }
+
+p.texto-box-history {
+    padding: 0 100px;
+    text-align: center;
+    font-size: 22px;
+    font-family: 'Raleway', sans-serif;
+    color: #666161;
+}
+
+.separador-history {
+    margin-bottom: 2%;
+    padding-left: 630px;
+}
+
+.box-history2{
+    height: 100%;
+    background-color: #EFF0F4;
+    width: 1300px;
+    margin: auto;
+    grid-area: box-history2;
+}
+
+/*.container-compare {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.compare {
+    position: relative;
+    width: 640px;
+    height: 450px;
+    border: 1px solid #f5f5f5;
+    box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.15);
+}
+
+.compare .before {
+    position: relative;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background: url(../ASSETS/IMAGES/background.jpeg);
+}
+
+.compare .before .after {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 320px;
+    height: 450px;
+    background: url(../ASSETS/IMAGES/equipe.jpeg);
+    z-index: 2;
+}
+
+.compare input {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    -webkit-appearance: none;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+}
+
+.compare input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    display: block;
+    width: 10px;
+    height: 450px;
+    border: 1px solid #f5f5f5;
+    background: #5b83dc;
+    cursor: pointer;
+}
+
+.compare input::-webkit-slider-thumb:active {
+    background: #e25a5a;
+    border: 1px solid #e25a5a;
+    transition:all 300ms ease-in-out;
+}*/
 
 /* ------ FOOTER ------ */
 .box-footer {
