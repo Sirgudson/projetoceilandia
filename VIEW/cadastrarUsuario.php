@@ -25,11 +25,11 @@
                     <td><input type="text" name="cpf" id="cpf" ></td>
                 </tr>
                 <tr>
-                    <td><label for="dtnasc">Email:</label></td>
+                    <td><label for="email">Email:</label></td>
                     <td><input type="email" name="email" id="email"></td>
                 </tr>
                 <tr>
-                    <td><label for="dtnasc">Senha:</label></td>
+                    <td><label for="senha">Senha:</label></td>
                     <td><input type="password" name="senha" id="senha"></td>
                 </tr>
                 <tr>
