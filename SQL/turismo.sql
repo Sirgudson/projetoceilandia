@@ -34,7 +34,7 @@ CREATE TABLE `tb_usuarios` (
   `EMAIL` varchar(255) NOT NULL,
   `PASSWORD` varchar(100) NOT NULL,
   `DATA_CADASTRO` datetime NOT NULL DEFAULT current_timestamp(),
-  `ATIVO` tinyint(4) NOT NULL,
+  `ATIVO` tinyint(4) NOT NULL DEFAULT '1',
   `TIPO` varchar(45) NOT NULL DEFAULT '2'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
