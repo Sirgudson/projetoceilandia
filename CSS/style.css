@@ -320,13 +320,6 @@ p.texto-box-history {
     grid-area: box-history2;
 }
 
-.container-compare {
-    /*position: absolute;*/
-    top: 50%;
-    left: 50%;
-    /*transform: translate(-50%,-50%);*/
-}
-
 .compare {
     position: relative;
     width: 1300px;

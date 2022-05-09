@@ -41,7 +41,7 @@
 
             </p>
         </div>
-        <div class="container-compare box-history2">
+        <div class="box-history2">
             <div class="compare">
                 <div class="before">
                     <div class="after"></div>
