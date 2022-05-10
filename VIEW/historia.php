@@ -46,8 +46,13 @@
                 <div class="before">
                     <div class="after"></div>
                 </div>
-                <input type="range" min="0" max="640" step="10" id="compare-ip">
+                <input type="range" min="0" max="1300" step="10" id="compare-ip">
             </div>
+            <!--<div class="texto-compare">Caixa D'agua contruída em 1971, é tombada como patrimonio histórico do DF.</div>-->
+        </div>
+        <div class="box-history3">
+        <h3 class="text-cultura">Prosopopéia contada pela moradora Nadir Sousa</h3>
+            <img src="../ASSETS/IMAGES/separador-laranja.png" alt="separador laranja" class="separador-history2">
         </div>
     </div>
 

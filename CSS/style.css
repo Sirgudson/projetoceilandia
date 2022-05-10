@@ -261,9 +261,9 @@ h4.text-cultura2{
 .paragrafo-equipe {
     font-family: 'Raleway', sans-serif;
     color: #EFF0F4;
-    padding: 20px 56px 0;
+    padding: 20px 60px 0;
     text-align: left;
-    font-size: 22px;
+    font-size: 20px;
 }
 
 .img-retangulo {
@@ -279,7 +279,7 @@ h4.text-cultura2{
 /* ------ PAGE HISTORIA ------ */
 .container-historia{
     display: grid;
-    grid-template-areas: "box-history" "box-history2";
+    grid-template-areas: "box-history" "box-history2" "box-history3";
 }
 
 .box-history {
@@ -313,16 +313,17 @@ p.texto-box-history {
 }
 
 .box-history2{
+    width: 100%;
+    max-width: 1300px;
     height: 100%;
     background-color: #EFF0F4;
-    width: 1300px;
     margin: auto;
     grid-area: box-history2;
 }
 
 .compare {
     position: relative;
-    width: 1300px;
+    width: 100%;
     height: 450px;
 }
 
@@ -331,7 +332,7 @@ p.texto-box-history {
     top: 0px;
     width: 100%;
     height: 100%;
-    background: url(../ASSETS/IMAGES/caixadagua-antes.jpeg);
+    background: url(../ASSETS/IMAGES/antes.png) left center no-repeat;
 }
 
 .compare .before .after {
@@ -340,7 +341,7 @@ p.texto-box-history {
     left: 0px;
     width: 650px;
     height: 450px;
-    background: url(../ASSETS/IMAGES/caixadagua-depois.webp);
+    background: url(../ASSETS/IMAGES/caixadagua-depois.png) left center no-repeat;
     z-index: 2;
 }
 
@@ -361,14 +362,29 @@ p.texto-box-history {
     width: 10px;
     height: 450px;
     border: 1px solid #f5f5f5;
-    background: #5b83dc;
+    background: #0097fc;
     cursor: pointer;
 }
 
 .compare input::-webkit-slider-thumb:active {
-    background: #e25a5a;
-    border: 1px solid #e25a5a;
+    background: #5012fc;
+    border: 1px solid #5012fc;
     transition:all 300ms ease-in-out;
+}
+
+.box-history3 {
+    width: 1300px;
+    height: 420px;
+    display: grid;
+    grid-area: box-history3;
+    margin: auto;
+    background-color: #EFF0F4;
+    margin-top: 5%;
+}
+
+.separador-history2 {
+    margin-bottom: 20%;
+    padding-left: 590px;
 }
 
 /* ------ FOOTER ------ */
