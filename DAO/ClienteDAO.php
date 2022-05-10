@@ -12,7 +12,7 @@ class ClienteDAO {
         try {
             $sql = "INSERT INTO "
                 . "tb_usuarios(nome,cpf,email,password) "
-                . "VALUES(:nome,:cpf,:email, :senha)";
+                . "VALUES(:nome,:cpf,:email,:senha)";
             $stmt = $this->pdo->prepare( $sql );
             $stmt->bindValue( ":nome", $clienteDTO->getNome() );
             $stmt->bindValue( ":cpf", $clienteDTO->getCpf() );

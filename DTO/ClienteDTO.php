@@ -35,7 +35,7 @@ class ClienteDTO {
     public function getSenha(){
         return $this->senha;
     }
-    public function setSenha($senha){
+    public function setSenha( $senha ){
         $this->senha = $senha;
     }
 
