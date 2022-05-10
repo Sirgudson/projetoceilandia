@@ -63,8 +63,8 @@ class ClienteDAO {
     public function update( ClienteDTO $clienteDTO ) {
         try {
             $sql = "UPDATE tb_usuarios SET "
-                . "nome=?, cpf=?, email=?, password=? "
-                . "WHERE id=?";
+                . "NOME=?, CPF=?, EMAIL=?, PASSWORD=? "
+                . "WHERE ID=?";
             $stmt = $this->pdo->prepare( $sql );
             $stmt->bindValue( 1, $clienteDTO->getNome() );
             $stmt->bindValue( 2, $clienteDTO->getCpf() );
