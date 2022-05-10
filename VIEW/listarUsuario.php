@@ -34,11 +34,11 @@ echo "  </tr>";
 
 foreach ( $usuarios as $usuario ) {
     echo "<tr>";
-    echo "  <td> {$usuario["nome"]}</td>";
-    echo "  <td>", formatarCpfCnpj( $usuario["cpf"] ), "</td>";
-    echo "  <td> {$usuario["email"]} </td>";
-    echo "  <td align='center'><a href='../controller/excluirUsuarioController.php?id={$usuario["id"]}'><i class='fa-solid fa-trash-can'></a></i></td>";
-    echo "  <td align='center'><a href='alterarUsuarioController.php?id={$usuario["id"]}'><i class='fa-solid fa-pen-to-square'></a></i></td>";
+    echo "  <td> {$usuario["NOME"]}</td>";
+    echo "  <td>", formatarCpfCnpj( $usuario["CPF"] ), "</td>";
+    echo "  <td> {$usuario["EMAIL"]} </td>";
+    echo "  <td align='center'><a href='../controller/excluirUsuarioController.php?id={$usuario["ID"]}'><i class='fa-solid fa-trash-can'></a></i></td>";
+    echo "  <td align='center'><a href='../controller/alterarUsuarioController.php?id={$usuario["ID"]}'><i class='fa-solid fa-pen-to-square'></a></i></td>";
     echo "</tr>";
 }
 echo "</table>";

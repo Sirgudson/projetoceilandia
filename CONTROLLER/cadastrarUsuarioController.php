@@ -18,7 +18,7 @@ $clienteDTO->setSenha( $senha );
 $clienteDAO = new ClienteDAO();
 $usuario = $clienteDAO->findByCpf( $cpf );
 
-$error[1] = "Cadastrado com suceso!";
+$error[1] = "Cadastrado com sucesso!";
 $error[2] = "Já existe um cliente cadastro com o cpf " . formatarCpfCnpj( $cpf );
 
 if ( empty( $usuario ) ) {
