@@ -23,8 +23,8 @@ $error[2] = "Já existe um cliente cadastro com o cpf " . formatarCpfCnpj( $cpf 
 
 if ( empty( $usuario ) ) {
     if ( $clienteDAO->salvar( $clienteDTO ) ) {
-        header( "Location: ../view/cadastrarUsuario.php?msg={$error[1]}" );
+        header( "Location: ../view/login.php?msg={$error[1]}" );
     }
 } else {
-    header( "Location: ../view/cadastrarUsuario.php?msg={$error[2]}" );
+    header( "Location: ../view/login.php?msg={$error[2]}" );
 }

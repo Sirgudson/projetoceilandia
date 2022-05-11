@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../CSS/style-internas.css">
     <link rel="shortcut icon" href="../ASSETS/ICO/logo1.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
-        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/jquery.mask.min.js"></script>
+    <script src="../js/jquery-validation-1.19.3/dist/jquery.validate.min.js"></script>
     <title>Projeto Ceilândia</title>
 </head>
 <body>
@@ -21,24 +23,28 @@
                
             <div class="second-column">
                 <h2 class="title title-second">crie sua conta</h2>
-                <form class="form">
+                <form id="formCadastrarUsuario" action="../controller/cadastrarUsuarioController.php" class="form" method="post">
                     <label class="label-input" for="">
                         <i class="far fa-user icon-modify"></i>
-                        <input type="text" placeholder="Nome">
+                        <input type="text" name="nome" placeholder="Nome">
                     </label>
-                    
+
+                    <label class="label-input" for="">
+                        <i class="far fa-user icon-modify"></i>
+                        <input type="text" name="cpf" id="cpf" placeholder="CPF">
+                    </label>
+            
                     <label class="label-input" for="">
                         <i class="far fa-envelope icon-modify"></i>
-                        <input type="email" placeholder="E-mail">
+                        <input type="email" name="email" id="email" placeholder="E-mail">
                     </label>
                     
                     <label class="label-input" for="">
                         <i class="fas fa-lock icon-modify"></i>
-                        <input type="password" placeholder="Senha">
+                        <input type="password" name="senha" id="senha" placeholder="Senha">
                     </label>
                     
-                    
-                    <button class="btn btn-second">criar</button>        
+                    <button class="btn btn-second" type="submit">criar</button>        
                 </form>
             </div>
         </div>
@@ -72,5 +78,40 @@
         </div>
     </div>
     <script src="../JS/function2.js"></script>
+    <div style="text-align: center;">
+<?php
+    if ( isset( $_GET["msg"] ) ) {
+        echo $_GET["msg"];
+    }
+?>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $('#cpf').mask('000.000.000-00');
+        });
+    </script>
+    <script>
+        $( "#formCadastrarUsuario" ).validate({
+            rules: {
+                nome: {
+                    required: true,
+                },
+                cpf: {
+                    required: true,
+                    minlength: 11
+                }
+            },
+            messages: {
+                cpf: {
+                    required: "Campo obrigatório",
+                    minlength: jQuery.validator.format("Pelo menos {0} dígitos são necessários!"),
+                },
+                nome: {
+                    required: "Campo obrigatório",
+                }
+
+            }
+        });
+    </script>
 </body>
 </html>
