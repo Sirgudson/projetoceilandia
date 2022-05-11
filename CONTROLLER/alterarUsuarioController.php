@@ -1,11 +1,10 @@
 <?php
 require_once '../DTO/ClienteDTO.php';
 require_once '../DAO/ClienteDAO.php';
-include '../js/funcao.php';
 
 $idUsuario = $_POST["idUsuario"];
 $nome = $_POST["nome"];
-$cpf = removerFormatoCpfCnpj( $_POST["cpf"] );
+$cpf =  $_POST["cpf"];
 $email = $_POST["email"];
 $senha = $_POST["senha"];
 
@@ -20,5 +19,5 @@ $clienteDTO->setSenha( $senha );
 $clienteDAO = new ClienteDAO();
 
 if ($clienteDAO->update($clienteDTO)) {
-   // header("Location: ../VIEW/listarUsuario.php");
+   header("Location: ../VIEW/listarUsuario.php");
 }

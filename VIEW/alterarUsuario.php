@@ -10,31 +10,31 @@
 
 <body>
 <?php
-require_once '../dao/ClienteDAO.php';
+require_once '../DAO/ClienteDAO.php';
 $idUsuario = $_GET["id"];
 $clienteDAO = new ClienteDAO();
 $usuario = $clienteDAO->findById( $idUsuario );
 ?>
     <fieldset>
-        <legend>Alterar cliente</legend>
-        <form action="../controller/alterarUsuarioController.php" method="post">
-            <input type="hidden" name="idUsuario" value="<?php echo $usuario["id"] ?>">
+        <legend>Alterar Usuário</legend>
+        <form action="../CONTROLLER/alterarUsuarioController.php" method="post">
+            <input type="hidden" name="idUsuario" value="<?php echo $usuario["ID"] ?>">
             <table>
                 <tr>
                     <td>Nome:</td>
-                    <td><input type="text" name="nome" value="<?php echo $usuario["nome"] ?>"></td>
+                    <td><input type="text" name="nome" value="<?php echo $usuario["NOME"] ?>"></td>
                 </tr>
                 <tr>
                     <td>CPF:</td>
-                    <td><input type="text" name="cpf" id="cpf" value="<?php echo $usuario["cpf"] ?>"></td>
+                    <td><input type="text" name="cpf" id="cpf" value="<?php echo $usuario["CPF"] ?>"></td>
                 </tr>
                 <tr>
                     <td>Email:</td>
-                    <td><input type="email" name="email" value="<?php echo $usuario["email"] ?>"></td>
+                    <td><input type="email" name="email" value="<?php echo $usuario["EMAIL"] ?>"></td>
                 </tr>
                 <tr>
                     <td>Senha:</td>
-                    <td><input type="text" name="senha" id="senha" value="<?php echo $usuario["senha"] ?>"></td>
+                    <td><input type="text" name="senha" id="senha" value="<?php echo $usuario["PASSWORD"] ?>"></td>
                 </tr>
                 <tr>
                     <td colspan="2">
