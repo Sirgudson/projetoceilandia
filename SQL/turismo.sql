@@ -1,42 +1,96 @@
--- phpMyAdmin SQL Dump
--- version 5.1.1
--- https://www.phpmyadmin.net/
---
--- Host: 127.0.0.1
--- Tempo de geração: 06-Maio-2022 às 14:47
--- Versão do servidor: 10.4.21-MariaDB
--- versão do PHP: 8.0.10
+-- MySQL Workbench Forward Engineering
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-START TRANSACTION;
-SET time_zone = "+00:00";
+SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
+SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
 
+-- -----------------------------------------------------
+-- Schema turismo
+-- -----------------------------------------------------
 
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
+-- -----------------------------------------------------
+-- Schema turismo
+-- -----------------------------------------------------
+CREATE SCHEMA IF NOT EXISTS `turismo` DEFAULT CHARACTER SET utf8 ;
+USE `turismo` ;
 
---
--- Banco de dados: `turismo`
---
-
--- --------------------------------------------------------
-
---
--- Estrutura da tabela `tb_usuarios`
---
-
-CREATE TABLE `tb_usuarios` (
-  `ID` int(11) NOT NULL,
-  `NOME` varchar(100) NOT NULL,
-  `CPF` varchar(11) NOT NULL,
-  `EMAIL` varchar(255) NOT NULL,
-  `PASSWORD` varchar(100) NOT NULL,
+-- -----------------------------------------------------
+-- Table `turismo`.`tb_usuarios`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `turismo`.`tb_usuarios` (
+  `ID` INT(11) NOT NULL AUTO_INCREMENT,
+  `NOME` VARCHAR(100) NOT NULL,
+  `CPF` VARCHAR(11) NOT NULL,
+  `EMAIL` VARCHAR(255) NOT NULL,
+  `PASSWORD` VARCHAR(100) NOT NULL,
   `DATA_CADASTRO` datetime NOT NULL DEFAULT current_timestamp(),
-  `ATIVO` tinyint(4) NOT NULL DEFAULT '1',
-  `TIPO` varchar(45) NOT NULL DEFAULT '2'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `ATIVO` TINYINT(4) NOT NULL DEFAULT '1',
+  `TIPO` VARCHAR(45) NOT NULL DEFAULT '2',
+  PRIMARY KEY (`ID`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `turismo`.`tb_eventos`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `turismo`.`tb_eventos` (
+  `ID` INT NOT NULL AUTO_INCREMENT,
+  `LOCAL` VARCHAR(45) NOT NULL,
+  `TITULO` VARCHAR(45) NOT NULL,
+  `DESCRICAO` VARCHAR(45) NOT NULL,
+  `DATA_INICIO` DATETIME NOT NULL,
+  `DATA_TERMINO` DATETIME NOT NULL,
+  `CAPACIDADE` VARCHAR(45) NOT NULL DEFAULT '1',
+  `ATIVO` TINYINT NOT NULL DEFAULT 0,
+  PRIMARY KEY (`ID`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `turismo`.`tb_arquivos_eventos`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `turismo`.`tb_arquivos_eventos` (
+  `ID` INT NOT NULL AUTO_INCREMENT,
+  `NOME` VARCHAR(45) NOT NULL,
+  `CAMINHO` VARCHAR(255) NOT NULL,
+  `EVENTOS_ID` INT NOT NULL,
+  PRIMARY KEY (`ID`),
+  INDEX `fk_ARQUIVOS_EVENTOS_EVENTOS_idx` (`EVENTOS_ID` ASC),
+  CONSTRAINT `fk_ARQUIVOS_EVENTOS_EVENTOS`
+    FOREIGN KEY (`EVENTOS_ID`)
+    REFERENCES `turismo`.`tb_eventos` (`ID`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `turismo`.`tb_usuarios_eventos`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `turismo`.`tb_usuarios_eventos` (
+  `USUARIOS_ID` INT NOT NULL,
+  `EVENTOS_ID` INT NOT NULL,
+  PRIMARY KEY (`USUARIOS_ID`, `EVENTOS_ID`),
+  INDEX `fk_USUARIOS_has_EVENTOS_EVENTOS1_idx` (`EVENTOS_ID` ASC),
+  INDEX `fk_USUARIOS_has_EVENTOS_USUARIOS1_idx` (`USUARIOS_ID` ASC),
+  CONSTRAINT `fk_USUARIOS_has_EVENTOS_USUARIOS1`
+    FOREIGN KEY (`USUARIOS_ID`)
+    REFERENCES `turismo`.`tb_usuarios` (`ID`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_USUARIOS_has_EVENTOS_EVENTOS1`
+    FOREIGN KEY (`EVENTOS_ID`)
+    REFERENCES `turismo`.`tb_eventos` (`ID`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+SET SQL_MODE=@OLD_SQL_MODE;
+SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+
+--
 
 --
 -- Extraindo dados da tabela `tb_usuarios`
@@ -54,27 +108,3 @@ INSERT INTO `tb_usuarios` (`ID`, `NOME`, `CPF`, `EMAIL`, `PASSWORD`, `DATA_CADAS
 (10, 'Imperador Palpatine', '66613246578', 'imperador@starws.com', 'password214', '2022-05-06 09:42:05', 0, '2'),
 (11, 'Luke Skywalker', '85231465978', 'luke@jedi.com', 'darkside34576', '2022-05-06 09:42:56', 0, '2');
 
---
--- Índices para tabelas despejadas
---
-
---
--- Índices para tabela `tb_usuarios`
---
-ALTER TABLE `tb_usuarios`
-  ADD PRIMARY KEY (`ID`);
-
---
--- AUTO_INCREMENT de tabelas despejadas
---
-
---
--- AUTO_INCREMENT de tabela `tb_usuarios`
---
-ALTER TABLE `tb_usuarios`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
-COMMIT;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
