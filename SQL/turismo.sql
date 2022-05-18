@@ -2,7 +2,7 @@
 
 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
-SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
 
 
 -- -----------------------------------------------------
@@ -10,6 +10,60 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
 -- -----------------------------------------------------
 CREATE SCHEMA IF NOT EXISTS `turismo` DEFAULT CHARACTER SET utf8 ;
 USE `turismo` ;
+
+-- -----------------------------------------------------
+-- Table `turismo`.`tb_avaliacao`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `turismo`.`tb_avaliacao` (
+  `ID` INT(11) NOT NULL AUTO_INCREMENT,
+  `NOME` VARCHAR(100) NOT NULL,
+  `OPINIAO` VARCHAR(255) NOT NULL,
+  `AVALIACAO` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`ID`));
+
+USE `turismo` ;
+
+-- -----------------------------------------------------
+-- Table `turismo`.`tb_eventos`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `turismo`.`tb_eventos` (
+  `ID` INT NOT NULL AUTO_INCREMENT,
+  `LOCAL` VARCHAR(45) NOT NULL,
+  `TITULO` VARCHAR(45) NOT NULL,
+  `DESCRICAO` VARCHAR(255) NOT NULL,
+  `DATA_INICIO` datetime DEFAULT NULL,
+  `DATA_TERMINO` datetime DEFAULT NULL,
+  `CAPACIDADE` VARCHAR(45) NOT NULL DEFAULT '1',
+  `ATIVO` TINYINT NOT NULL DEFAULT 0,
+  PRIMARY KEY (`ID`))
+ENGINE = InnoDB;
+
+--
+-- Extraindo dados da tabela `tb_eventos`
+--
+
+INSERT INTO `tb_eventos` (`ID`, `LOCAL`, `TITULO`, `DESCRICAO`, `DATA_INICIO`, `DATA_TERMINO`, `CAPACIDADE`, `ATIVO`) VALUES
+(1, 'Ceilândia', 'Casa do Cantador', 'A Casa do Cantador, localizada em Ceilândia - DF, é o espaço cultural mais importante da Cidade, que abarca todos os movimentos artísticos e culturais do local.', NULL, NULL, '1', 0),
+(3, 'Ceilândia Sul', 'Estádio Maria de Lourdes Abadia', 'O Estádio Maria de Lourdes Abadia, conhecido popularmente como Abadião, é um estádio de esportes brasileiro, situado em Ceilândia, no Distrito Federal. ', NULL, NULL, '1', 0),
+(4, 'Ceilândia Norte', 'Centro Olímpico do Setor O', 'O programa desenvolvido pela Secretaria de Esporte e Lazer atua nas regiões administrativas do Distrito Federal por meio de parcerias público-privadas. ', NULL, NULL, '1', 0);
+
+-- -----------------------------------------------------
+-- Table `turismo`.`tb_arquivos_eventos`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `turismo`.`tb_arquivos_eventos` (
+  `ID` INT NOT NULL AUTO_INCREMENT,
+  `NOME` VARCHAR(45) NOT NULL,
+  `CAMINHO` VARCHAR(255) NOT NULL,
+  `EVENTOS_ID` INT NOT NULL,
+  PRIMARY KEY (`ID`),
+  INDEX `fk_ARQUIVOS_EVENTOS_EVENTOS_idx` (`EVENTOS_ID` ASC),
+  CONSTRAINT `fk_ARQUIVOS_EVENTOS_EVENTOS`
+    FOREIGN KEY (`EVENTOS_ID`)
+    REFERENCES `turismo`.`tb_eventos` (`ID`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
 
 -- -----------------------------------------------------
 -- Table `turismo`.`tb_usuarios`
@@ -44,49 +98,6 @@ INSERT INTO `tb_usuarios` (`ID`, `NOME`, `CPF`, `EMAIL`, `PASSWORD`, `DATA_CADAS
 
 
 -- -----------------------------------------------------
--- Table `turismo`.`tb_eventos`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `turismo`.`tb_eventos` (
-  `ID` INT NOT NULL AUTO_INCREMENT,
-  `LOCAL` VARCHAR(45) NOT NULL,
-  `TITULO` VARCHAR(45) NOT NULL,
-  `DESCRICAO` VARCHAR(255) NOT NULL,
-  `DATA_INICIO` datetime DEFAULT NULL,
-  `DATA_TERMINO` datetime DEFAULT NULL,
-  `CAPACIDADE` VARCHAR(45) NOT NULL DEFAULT '1',
-  `ATIVO` TINYINT NOT NULL DEFAULT 0,
-  PRIMARY KEY (`ID`))
-ENGINE = InnoDB;
-
---
--- Extraindo dados da tabela `tb_eventos`
---
-
-INSERT INTO `tb_eventos` (`ID`, `LOCAL`, `TITULO`, `DESCRICAO`, `DATA_INICIO`, `DATA_TERMINO`, `CAPACIDADE`, `ATIVO`) VALUES
-(1, 'Ceilândia', 'Casa do Cantador', 'A Casa do Cantador, localizada em Ceilândia - DF, é o espaço cultural mais importante da Cidade, que abarca todos os movimentos artísticos e culturais do local.', NULL, NULL, '1', 0),
-(3, 'Ceilândia Sul', 'Estádio Maria de Lourdes Abadia', 'O Estádio Maria de Lourdes Abadia, conhecido popularmente como Abadião, é um estádio de esportes brasileiro, situado em Ceilândia, no Distrito Federal. ', NULL, NULL, '1', 0),
-(4, 'Ceilândia Norte', 'Centro Olímpico do Setor O', 'O programa desenvolvido pela Secretaria de Esporte e Lazer atua nas regiões administrativas do Distrito Federal por meio de parcerias público-privadas. ', NULL, NULL, '1', 0);
-
--- --------------------------------------------------------
--- -----------------------------------------------------
--- Table `turismo`.`tb_arquivos_eventos`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `turismo`.`tb_arquivos_eventos` (
-  `ID` INT NOT NULL AUTO_INCREMENT,
-  `NOME` VARCHAR(45) NOT NULL,
-  `CAMINHO` VARCHAR(255) NOT NULL,
-  `EVENTOS_ID` INT NOT NULL,
-  PRIMARY KEY (`ID`),
-  INDEX `fk_ARQUIVOS_EVENTOS_EVENTOS_idx` (`EVENTOS_ID` ASC),
-  CONSTRAINT `fk_ARQUIVOS_EVENTOS_EVENTOS`
-    FOREIGN KEY (`EVENTOS_ID`)
-    REFERENCES `turismo`.`tb_eventos` (`ID`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
 -- Table `turismo`.`tb_usuarios_eventos`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `turismo`.`tb_usuarios_eventos` (
@@ -111,5 +122,3 @@ ENGINE = InnoDB;
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
-
---
