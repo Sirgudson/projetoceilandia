@@ -279,7 +279,7 @@ h4.text-cultura2{
 /* ------ PAGE HISTORIA ------ */
 .container-historia{
     display: grid;
-    grid-template-areas: "box-history" "box-history2" "box-history3";
+    grid-template-areas: "box-history" "box-history2" "box-history3" "box-history4";
 }
 
 .box-history {
@@ -381,6 +381,7 @@ p.texto-box-history {
     margin: auto;
     background-color: #EFF0F4;
     margin-top: 5%;
+    padding-bottom: 100px;
 }
 
 .separador-history2 {
@@ -394,6 +395,29 @@ p.texto-box-history2 {
     font-family: 'Raleway', sans-serif;
     color: #666161;
     text-align: justify;
+}
+
+.box-history4{
+    width: 100%;
+    max-width: 1300px;
+    height: 100%;
+    background-color: #EFF0F4;
+    margin: auto;
+    grid-area: box-history4;
+    overflow: hidden;
+    box-shadow: 0px 0px 52px #999;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    transform: translateX(0);
+}
+
+#img {
+    width: 1300px;
+    height: 555px;
+    object-fit: cover;
 }
 
 /* ------ FOOTER ------ */

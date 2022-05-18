@@ -89,6 +89,15 @@
                 <br>
             </p>
         </div>
+        <div class="box-history4">
+            <div class="carousel" id="img">
+                <img src="../ASSETS/IMAGES/IMG-51.jpg" alt="">
+                <img src="../ASSETS/IMAGES/IMG-61.jpg" alt="">
+                <img src="../ASSETS/IMAGES/agora.jpeg" alt="">
+                <img src="../ASSETS/IMAGES/IMG-71.jpeg" alt="Estádio Regional de Ceilândia, conhecido como Abadião">
+                
+            </div>
+        </div>
     </div>
 
     <!-- FOOTER -->
