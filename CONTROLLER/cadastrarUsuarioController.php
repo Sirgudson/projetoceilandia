@@ -6,7 +6,7 @@ include '../js/funcao.php';
 $nome = $_POST["nome"];
 $cpf = removerFormatoCpfCnpj( $_POST["cpf"] );
 $email = $_POST["email"];
-$senha = $_POST["senha"];
+$senha = md5($_POST["senha"]);
 
 $clienteDTO = new ClienteDTO();
 $clienteDTO->setNome( $nome );

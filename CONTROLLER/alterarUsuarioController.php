@@ -6,7 +6,7 @@ $idUsuario = $_POST["idUsuario"];
 $nome = $_POST["nome"];
 $cpf =  $_POST["cpf"];
 $email = $_POST["email"];
-$senha = $_POST["senha"];
+$senha = md5($_POST["senha"]);
 
 $clienteDTO = new ClienteDTO();
 $clienteDTO->setId( $idUsuario );
