@@ -44,3 +44,9 @@
   font-size: 20px;
   color: #666161c5;
 }
+
+@media screen and (max-width: 1440px) {
+  .container-ponto {
+      margin-top: -4%;
+  }
+}
