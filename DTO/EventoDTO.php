@@ -7,6 +7,7 @@ class EventoDTO {
     private $inicio;
     private $encerramento;
     private $capacidade;
+    private $foto;
     private $id;
 
 
@@ -45,6 +46,12 @@ class EventoDTO {
     }
     public function setCapacidade( $capacidade ) {
         $this->capacidade = $capacidade;
+    }
+    public function getFoto() {
+        return $this->foto;
+    }
+    public function setFoto( $foto ) {
+        $this->foto = $foto;
     }
     public function getId() {
         return $this->id;
