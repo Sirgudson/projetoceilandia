@@ -11,8 +11,8 @@ class EventoDAO {
     public function salvar( EventoDTO $eventoDTO ) {
         try {
             $sql = "INSERT INTO "
-                . "tb_eventos(local,titulo,descricao,data_inicio,data_termino,capacidade) "
-                . "VALUES(:local,:titulo,:descricao,:inicio,:encerramento,:capacidade)";
+                . "tb_eventos(local,titulo,descricao,data_inicio,data_termino,capacidade,foto) "
+                . "VALUES(:local,:titulo,:descricao,:inicio,:encerramento,:capacidade,:foto)";
             $stmt = $this->pdo->prepare( $sql );
             $stmt->bindValue( ":local", $eventoDTO->getLocal() );
             $stmt->bindValue( ":titulo", $eventoDTO->getTitulo() );
@@ -20,6 +20,7 @@ class EventoDAO {
             $stmt->bindValue( ":inicio", $eventoDTO->getInicio() );
             $stmt->bindValue( ":encerramento", $eventoDTO->getEncerramento() );
             $stmt->bindValue( ":capacidade", $eventoDTO->getCapacidade() );
+            $stmt->bindValue( ':foto', $eventoDTO->getFoto() );
             return $stmt->execute();
         } catch ( PDOException $e ) {
             echo "Erro ao cadastrar novo Evento: ", $e->getMessage();

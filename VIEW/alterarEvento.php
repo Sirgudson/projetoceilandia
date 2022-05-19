@@ -14,10 +14,11 @@ require_once '../DAO/EventoDAO.php';
 $idEvento = $_GET["id"];
 $eventoDAO = new EventoDAO();
 $evento = $eventoDAO->findById( $idEvento );
+
 ?>
     <fieldset>
-        <legend>Alterar Evvento</legend>
-        <form action="../CONTROLLER/alterarEventoController.php" method="post">
+        <legend>Alterar Evento</legend>
+        <form id="formCadastrarEvento" action="../CONTROLLER/alterarEventoController.php" enctype="multipart/form-data" method="post">
             <input type="hidden" name="idEvento" value="<?php echo $evento["ID"] ?>">
             <table>
                 <tr>
@@ -43,6 +44,13 @@ $evento = $eventoDAO->findById( $idEvento );
                 <tr>
                     <td>Capacidade:</td>
                     <td><input type="text" name="capacidade" id="capacidade" value="<?php echo $evento["CAPACIDADE"] ?>"></td>
+                </tr>
+                <tr>
+                <td><img src="../ASSETS/EVENTOS/foto/<?php echo $evento["FOTO"] ?>" width="200"/></td>
+                </tr>
+                <tr>
+                    <td>Foto:</td>
+                    <td><input type="file" name="foto" id="foto"></td>
                 </tr>
                 <tr>
                     <td colspan="2">
