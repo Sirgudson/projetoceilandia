@@ -62,12 +62,12 @@
                 <form class="form" action="../CONTROLLER/usuarioController.php" method="post">
                     <label class="label-input" for="">
                         <i class="far fa-envelope icon-modify"></i>
-                        <input type="email" name="email" placeholder="E-mail">
+                        <input type="email" name="email" placeholder="E-mail" required>
                     </label>
                 
                     <label class="label-input" for="">
                         <i class="fas fa-lock icon-modify"></i>
-                        <input type="password" name="senha" placeholder="Senha">
+                        <input type="password" name="senha" placeholder="Senha" required>
                     </label>
                 
                     <a class="password" href="../VIEW/resetpassword.php">esqueceu sua senha?</a>
