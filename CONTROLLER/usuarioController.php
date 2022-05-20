@@ -3,7 +3,7 @@ require_once '../DAO/UsuarioDAO.php';
 session_start();
 
 $email = $_POST["email"];
-$senha = $_POST["senha"];
+$senha = md5( $_POST["senha"] );
 
 $UsuarioDAO = new UsuarioDAO();
 $usuario = $UsuarioDAO->findByEmailSenha( $email, $senha );
