@@ -26,7 +26,7 @@
                 </tr>
                 <tr>
                     <td><label for="descricao">Sua Avaliação:</label></td>
-                 <td><input type="radio" id="1" name="avaliacao" value="1">
+                    <td><input type="radio" id="1" name="avaliacao" value="1">
                     <label for="avaliacao">1</label></td>
                     <td><input type="radio" id="2" name="avaliacao" value="2">
                     <label for="avaliacao">2</label></td>
@@ -48,9 +48,9 @@
     </fieldset>
     <div style="text-align: center;">
         <?php
-        if (isset($_GET["msg"])) {
-            echo $_GET["msg"];
-        }
+            if ( isset( $_GET["msg"] ) ) {
+                echo $_GET["msg"];
+            }
         ?>
     </div>
     <script>

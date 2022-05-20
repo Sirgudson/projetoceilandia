@@ -10,10 +10,10 @@
 
 <body>
 <?php
-require_once '../DAO/AvaliacaoDAO.php';
-$idAvaliacao = $_GET["id"];
-$avaliacaoDAO = new AvaliacaoDAO();
-$avaliacao = $avaliacaoDAO->findById( $idAvaliacao );
+    require_once '../DAO/AvaliacaoDAO.php';
+    $idAvaliacao   = $_GET["id"];
+    $avaliacaoDAO  = new AvaliacaoDAO();
+    $avaliacao     = $avaliacaoDAO->findById( $idAvaliacao );
 ?>
     <fieldset>
         <legend>Alterar avaliacao Turístico</legend>
@@ -22,15 +22,28 @@ $avaliacao = $avaliacaoDAO->findById( $idAvaliacao );
             <table>
                 <tr>
                     <td>Nome:</td>
-                    <td><input type="text" name="local" value="<?php echo $avaliacao["NOME"] ?>"></td>
+                    <td><input type="text" name="nome" value="<?php echo $avaliacao["NOME"] ?>"></td>
                 </tr>
                 <tr>
                     <td>Opinião:</td>
-                    <td><input type="text" name="titulo" id="titulo" value="<?php echo $avaliacao["OPINIAO"] ?>"></td>
+                    <td><input type="text" name="opiniao" id="opiniao" value="<?php echo $avaliacao["OPINIAO"] ?>"></td>
                 </tr>
                 <tr>
-                    <td>Avaliação:</td>
-                    <td><input type="text" name="descricao" value="<?php echo $avaliacao["AVALIACAO"] ?>"></td>
+                    <td>Avaliação Cadastrada:</td>
+                    <td><input type="number" name="avaliacao" readonly="readonly" value="<?php echo $avaliacao["AVALIACAO"] ?>"></td>
+                    <tr>
+                    <td><label for="descricao">Editar Avaliação:</label></td>
+                    <td><input type="radio" id="1" name="avaliacao" value="1">
+                    <label for="avaliacao">1</label></td>
+                    <td><input type="radio" id="2" name="avaliacao" value="2">
+                    <label for="avaliacao">2</label></td>
+                    <td><input type="radio" id="3" name="avaliacao" value="3">
+                    <label for="avaliacao">3</label></td>
+                    <td><input type="radio" id="4" name="avaliacao" value="4">
+                    <label for="avaliacao">4</label></td>
+                    <td><input type="radio" id="5" name="avaliacao" value="5">
+                    <label for="avaliacao">5</label></td>
+                </tr>
                 </tr>
                 <tr>
                     <td colspan="2">
