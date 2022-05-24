@@ -12,18 +12,6 @@ CREATE SCHEMA IF NOT EXISTS `turismo` DEFAULT CHARACTER SET utf8 ;
 USE `turismo` ;
 
 -- -----------------------------------------------------
--- Table `turismo`.`tb_avaliacao`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `turismo`.`tb_avaliacao` (
-  `ID` INT(11) NOT NULL AUTO_INCREMENT,
-  `NOME` VARCHAR(100) NOT NULL,
-  `OPINIAO` VARCHAR(255) NOT NULL,
-  `AVALIACAO` INT(1) NOT NULL,
-  PRIMARY KEY (`ID`));
-
-USE `turismo` ;
-
--- -----------------------------------------------------
 -- Table `turismo`.`tb_eventos`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `turismo`.`tb_eventos` (
@@ -37,7 +25,8 @@ CREATE TABLE IF NOT EXISTS `turismo`.`tb_eventos` (
   `FOTO` VARCHAR(60) DEFAULT NULL,
   `ATIVO` TINYINT NOT NULL DEFAULT 0,
   PRIMARY KEY (`ID`))
-ENGINE = InnoDB;
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
 
 --
 -- Extraindo dados da tabela `tb_eventos`
@@ -63,7 +52,8 @@ CREATE TABLE IF NOT EXISTS `turismo`.`tb_arquivos_eventos` (
     REFERENCES `turismo`.`tb_eventos` (`ID`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
-ENGINE = InnoDB;
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
 
 
 -- -----------------------------------------------------
@@ -76,11 +66,11 @@ CREATE TABLE IF NOT EXISTS `turismo`.`tb_usuarios` (
   `EMAIL` VARCHAR(255) NOT NULL,
   `PASSWORD` VARCHAR(100) NOT NULL,
   `DATA_CADASTRO` datetime NOT NULL DEFAULT current_timestamp(),
-  `ATIVO` TINYINT(4) NOT NULL DEFAULT '1',
+  `ATIVO` TINYINT(4) NOT NULL DEFAULT 1,
   `TIPO` VARCHAR(45) NOT NULL DEFAULT '2',
   PRIMARY KEY (`ID`))
-ENGINE = InnoDB;
-
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
 --
 -- Extraindo dados da tabela `tb_usuarios`
 --
@@ -99,25 +89,46 @@ INSERT INTO `tb_usuarios` (`ID`, `NOME`, `CPF`, `EMAIL`, `PASSWORD`, `DATA_CADAS
 
 
 -- -----------------------------------------------------
+-- Table `turismo`.`tb_avaliacao`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `turismo`.`tb_avaliacao` (
+  `ID` INT(11) NOT NULL AUTO_INCREMENT,
+  `NOME` VARCHAR(100) NOT NULL,
+  `OPINIAO` VARCHAR(255) NOT NULL,
+  `AVALIACAO` INT(1) NOT NULL,
+  `tb_usuarios_ID` INT(11) NULL,
+  PRIMARY KEY (`ID`),
+  INDEX `fk_tb_avaliacao_tb_usuarios1_idx` (`tb_usuarios_ID` ASC),
+  CONSTRAINT `fk_tb_avaliacao_tb_usuarios1`
+    FOREIGN KEY (`tb_usuarios_ID`)
+    REFERENCES `turismo`.`tb_usuarios` (`ID`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+
+
+-- -----------------------------------------------------
 -- Table `turismo`.`tb_usuarios_eventos`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `turismo`.`tb_usuarios_eventos` (
-  `USUARIOS_ID` INT NOT NULL,
-  `EVENTOS_ID` INT NOT NULL,
+  `USUARIOS_ID` INT(11) NOT NULL,
+  `EVENTOS_ID` INT(11) NOT NULL,
   PRIMARY KEY (`USUARIOS_ID`, `EVENTOS_ID`),
   INDEX `fk_USUARIOS_has_EVENTOS_EVENTOS1_idx` (`EVENTOS_ID` ASC),
   INDEX `fk_USUARIOS_has_EVENTOS_USUARIOS1_idx` (`USUARIOS_ID` ASC),
-  CONSTRAINT `fk_USUARIOS_has_EVENTOS_USUARIOS1`
-    FOREIGN KEY (`USUARIOS_ID`)
-    REFERENCES `turismo`.`tb_usuarios` (`ID`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
   CONSTRAINT `fk_USUARIOS_has_EVENTOS_EVENTOS1`
     FOREIGN KEY (`EVENTOS_ID`)
     REFERENCES `turismo`.`tb_eventos` (`ID`)
     ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_USUARIOS_has_EVENTOS_USUARIOS1`
+    FOREIGN KEY (`USUARIOS_ID`)
+    REFERENCES `turismo`.`tb_usuarios` (`ID`)
+    ON DELETE NO ACTION
     ON UPDATE NO ACTION)
-ENGINE = InnoDB;
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
 
 
 SET SQL_MODE=@OLD_SQL_MODE;
