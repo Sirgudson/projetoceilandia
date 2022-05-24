@@ -4,6 +4,7 @@ class PontoDTO {
     private $local;
     private $titulo;
     private $descricao;
+    private $foto;
     private $id;
 
 
@@ -24,6 +25,12 @@ class PontoDTO {
     }
     public function setDescricao( $descricao ) {
         $this->descricao = $descricao;
+    }
+    public function getFoto() {
+        return $this->foto;
+    }
+    public function setFoto( $foto ) {
+        $this->foto = $foto;
     }
     public function getId() {
         return $this->id;
