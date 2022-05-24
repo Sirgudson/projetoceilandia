@@ -14,7 +14,7 @@
 <body>
     <fieldset>
         <legend>Cadastrar Ponto Turístico </legend>
-        <form id="formCadastrarPonto" action="../controller/cadastrarPontoController.php" method="post">
+        <form id="formCadastrarPonto" action="../controller/cadastrarPontoController.php" enctype="multipart/form-data" method="post">
             <table>
                 <tr>
                     <td><label for="local">Local do Ponto Turístico:</label></td>
@@ -27,6 +27,10 @@
                 <tr>
                     <td><label for="descricao">Descrição do Ponto Turístico:</label></td>
                     <td><input type="text" name="descricao" id="descricao"></td>
+                </tr>
+                <tr>
+                    <td><label for="descricao">Foto do Evento:</label></td>
+                    <td><input type="file" name="foto" id="foto"></td>
                 </tr>
                 <tr>
                     <td colspan="2">
