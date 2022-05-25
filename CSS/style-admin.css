@@ -243,6 +243,14 @@
   font-size: 26px;
   font-weight: 600;
 }
+#iframe {
+  position:absolute; 
+  right:-200px; 
+  top: 128px;
+  z-index:1000;
+  width: calc(100% - 78px);
+  height: 100%;
+}
 @media (max-width: 400px) {
   .sidebar.close .nav-links li .sub-menu{
     display: none;
@@ -264,6 +272,46 @@
   }
 }
 
+/* -------- LISTAR USUÁRIO, PONTO E PASSEIO -------- */
+.container-list {
+  padding: 20px;
+  justify-content: center;
+  width: 80%;
+  transition: all 0.5s ease;
+  height: 60%;  
+  position: absolute;
+}
+.container-list h1 {
+  text-align: center;
+  color: #3781e2;
+  font-size: 40px;
+  margin: 30px;
+}
+.container-list table {
+  margin: auto;
+  margin-top: 5%;
+  color: #000;
+  width: 100%;
+  height: 100%;
+  background-color: #EFF0F4;
+  text-align: center;
+}
+.container-list th {
+  background-color: #F8B86E;;
+  color: #000c42;
+}
+.container-list tr{
+  background-color: #fff;
+}
+.container-list tr:nth-child(even){
+  background-color: #8fd0e411;
+}
+.icon {
+  color: #49c749;
+}
+.delete {
+  color: #e45353;
+}
 
 
 /*.container-admin{
