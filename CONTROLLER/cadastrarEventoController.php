@@ -24,10 +24,7 @@ $eventoDTO->setEncerramento( $encerramento );
 $eventoDTO->setCapacidade( $capacidade );
 $eventoDTO->setFoto( isset( $foto ) && $foto["error"] == 0 ? $upload->getNome( $foto ) : null );
 
-
 $eventoDAO = new EventoDAO();
-
-
 
 if ( empty( $evento ) ) {
     if ( $eventoDAO->salvar( $eventoDTO ) ) {
@@ -42,5 +39,4 @@ if ( empty( $evento ) ) {
     Vamos tentar novamente? Redirecionando..
     <?php header( 'Refresh: 4; URL=http://localhost/projetoceilandia/VIEW/cadastrarEvento.php' );?>
 </div>
-<?php
-}
+<?php } ?>
