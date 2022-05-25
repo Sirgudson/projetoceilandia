@@ -15,13 +15,6 @@
 <body>
     <!-- HEADER -->
     <?php include('header.php'); ?>
-    <?php
-    /*session_start();
-    if ( !isset( $_SESSION["usuario"] ) ) {
-        header( "Location: ../VIEW/index.php" );
-    }
-    echo "Usuario logado: {$_SESSION["usuario"]}";*/
-    ?>
     <div class="apresentacao">
         <h1 class="titulo">Passeio</h1>
         <img src="../ASSETS/IMAGES/onda1.png" alt="onda1">
