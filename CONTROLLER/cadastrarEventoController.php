@@ -28,14 +28,19 @@ $eventoDTO->setFoto( isset( $foto ) && $foto["error"] == 0 ? $upload->getNome( $
 $eventoDAO = new EventoDAO();
 
 
-$error[1] = "Cadastrado com sucesso!";
-$error[2] = "Erro ao cadastrar evento, revise os dados! ";
 
 if ( empty( $evento ) ) {
     if ( $eventoDAO->salvar( $eventoDTO ) ) {
         $upload->salvar( $foto, DIR_FOTO );
-        header( "Location: ../view/login.php?msg={$error[1]}" );
+        header( "Location: ../VIEW/listarEvento.php" );
     }
 } else {
-    header( "Location: ../view/login.php?msg={$error[2]}" );
+?>
+<div class="alert alert-danger" role="alert">
+    <p>Algo deu errado!</p>
+
+    Vamos tentar novamente? Redirecionando..
+    <?php header( 'Refresh: 4; URL=http://localhost/projetoceilandia/VIEW/cadastrarEvento.php' );?>
+</div>
+<?php
 }
