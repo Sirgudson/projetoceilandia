@@ -11,7 +11,7 @@
 
     if ( !empty( $usuario ) ) {
         $_SESSION["usuario"] = $usuario["email"];
-        header( "Location: ../VIEW/passeio.php" );
+        header( "Location: ../VIEW/admin.php" );
     } else {
     ?>
     <div class="alert alert-danger" role="alert">

@@ -17,13 +17,16 @@ $avaliacaoDTO->setAvaliacao( $avaliacao );
 $avaliacaoDAO = new AvaliacaoDAO();
 
 
-$error[1] = "Cadastrado com sucesso!";
-$error[2] = "Já existe essa avaliacao cadastrada ";
-
 if ( empty( $avaliacao ) ) {
     if ( $avaliacaoDAO->salvar( $avaliacaoDTO ) ) {
-        header( "Location: ../view/login.php?msg={$error[1]}" );
+        header( "Location: ../VIEW/listarAvaliacao.php" );
     }
 } else {
-    header( "Location: ../view/login.php?msg={$error[2]}" );
-}
+?>
+<div class="alert alert-danger" role="alert">
+    <p>Algo deu errado!</p>
+
+    Vamos tentar novamente? Redirecionando..
+    <?php header( 'Refresh: 4; URL=http://localhost/projetoceilandia/VIEW/cadastrarAvaliacao.php' );?>
+</div>
+<?php } ?>
