@@ -23,14 +23,17 @@ $pontoDTO->setFoto( isset( $foto ) && $foto["error"] == 0 ? $upload->getNome( $f
 $pontoDAO = new PontoDAO();
 
 
-$error[1] = "Cadastrado com sucesso!";
-$error[2] = "Erro ao cadastrar Ponto Turístico, revise os dados! ";
-
 if ( empty( $ponto ) ) {
     if ( $pontoDAO->salvar( $pontoDTO ) ) {
         $upload->salvar( $foto, DIR_FOTO );
-        header( "Location: ../view/login.php?msg={$error[1]}" );
+        header( "Location: ../VIEW/pontoturistico.php" );
     }
 } else {
-    header( "Location: ../view/login.php?msg={$error[2]}" );
-}
+?>
+<div class="alert alert-danger" role="alert">
+    <p>Algo deu errado!</p>
+
+    Vamos tentar novamente? Redirecionando..
+    <?php header( 'Refresh: 4; URL=http://localhost/projetoceilandia/VIEW/cadastrarPonto.php' );?>
+</div>
+<?php } ?>
