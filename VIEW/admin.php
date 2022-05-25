@@ -23,12 +23,12 @@
 
     <ul class="nav-links">
       <li>
-        <a href="#">
+        <a href="../VIEW/admin.php">
           <i class="fa fa-regular fa-toolbox"></i>
           <span class="link_name">Menu Admin</span>
         </a>
         <ul class="sub-menu blank">
-          <li><a class="link_name" href="#">Menu Admin</a></li>
+          <li><a class="link_name" href="../VIEW/admin.php">Menu Admin</a></li>
         </ul>
       </li>
 
@@ -45,7 +45,7 @@
           <li><a class="link_name" href="#">Usuários</a></li>
           <a href="#"></a>
           <li><a href="#" onclick="carregarIframe('listarUsuario.php')">Todos</a></li>
-          <li><a href="#">Cadastrar</a></li>
+          <li><a href="../VIEW/login.php">Cadastrar</a></li>
         </ul>
       </li>
 
@@ -112,10 +112,12 @@
       <i class='bx bx-menu'></i>
       <span class="text">Turismo Candango: PROJETO CEILÂNDIA</span>
     </div>
+    <iframe src="" frameborder="0"  id="iframe"></iframe>
   </section>
-  <iframe src="" frameborder="0"  id="iframe"></iframe>
+  
   <script>
     let arrow = document.querySelectorAll(".arrow");
+    const iframe = document.querySelector("#iframe");
     for (var i = 0; i < arrow.length; i++) {
       arrow[i].addEventListener("click", (e) => {
         let arrowParent = e.target.parentElement.parentElement;
@@ -127,6 +129,8 @@
     console.log(sidebarBtn);
     sidebarBtn.addEventListener("click", () => {
       sidebar.classList.toggle("close");
+      iframe.classList.toggle("active");
+
     });
 
     function log_out() {
@@ -134,7 +138,6 @@
     }
 
     function carregarIframe(src) {
-      const iframe = document.querySelector("#iframe");
       iframe.src = src;
     }
   </script>
