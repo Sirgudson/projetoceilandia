@@ -8,12 +8,14 @@ $nome = $_POST["nome"];
 $cpf = removerFormatoCpfCnpj( $_POST["cpf"] );
 $email = $_POST["email"];
 $senha = md5($_POST["senha"]);
+$situacao = $_POST["ativo"];
 
 $clienteDTO = new ClienteDTO();
 $clienteDTO->setNome( $nome );
 $clienteDTO->setCpf( $cpf );
 $clienteDTO->setEmail( $email );
 $clienteDTO->setSenha( $senha );
+$clienteDTO->setSituacao( $situacao );
 
 
 $clienteDAO = new ClienteDAO();
