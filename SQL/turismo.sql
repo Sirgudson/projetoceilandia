@@ -34,8 +34,8 @@ DEFAULT CHARACTER SET = utf8;
 
 INSERT INTO `tb_eventos` (`ID`, `LOCAL`, `TITULO`, `DESCRICAO`, `DATA_INICIO`, `DATA_TERMINO`, `CAPACIDADE`, `ATIVO`) VALUES
 (1, 'Ceilândia', 'Casa do Cantador', 'A Casa do Cantador, localizada em Ceilândia - DF, é o espaço cultural mais importante da Cidade, que abarca todos os movimentos artísticos e culturais do local.', NULL, NULL, '1', 0),
-(3, 'Ceilândia Sul', 'Estádio Maria de Lourdes Abadia', 'O Estádio Maria de Lourdes Abadia, conhecido popularmente como Abadião, é um estádio de esportes brasileiro, situado em Ceilândia, no Distrito Federal. ', NULL, NULL, '1', 0),
-(4, 'Ceilândia Norte', 'Centro Olímpico do Setor O', 'O programa desenvolvido pela Secretaria de Esporte e Lazer atua nas regiões administrativas do Distrito Federal por meio de parcerias público-privadas. ', NULL, NULL, '1', 0);
+(2, 'Ceilândia Sul', 'Estádio Maria de Lourdes Abadia', 'O Estádio Maria de Lourdes Abadia, conhecido popularmente como Abadião, é um estádio de esportes brasileiro, situado em Ceilândia, no Distrito Federal. ', NULL, NULL, '1', 0),
+(3, 'Ceilândia Norte', 'Centro Olímpico do Setor O', 'O programa desenvolvido pela Secretaria de Esporte e Lazer atua nas regiões administrativas do Distrito Federal por meio de parcerias público-privadas. ', NULL, NULL, '1', 0);
 
 -- -----------------------------------------------------
 -- Table `turismo`.`tb_arquivos_eventos`
@@ -62,7 +62,7 @@ DEFAULT CHARACTER SET = utf8;
 CREATE TABLE IF NOT EXISTS `turismo`.`tb_usuarios` (
   `ID` INT(11) NOT NULL AUTO_INCREMENT,
   `NOME` VARCHAR(100) NOT NULL,
-  `CPF` VARCHAR(11) NOT NULL,
+  `CPF` VARCHAR(11) NOT NULL UNIQUE,
   `EMAIL` VARCHAR(255) NOT NULL,
   `PASSWORD` VARCHAR(100) NOT NULL,
   `DATA_CADASTRO` datetime NOT NULL DEFAULT current_timestamp(),
@@ -81,7 +81,7 @@ INSERT INTO `tb_usuarios` (`ID`, `NOME`, `CPF`, `EMAIL`, `PASSWORD`, `DATA_CADAS
 (3, 'Nadyr Souza', '65204892721', 'nadyr.souza@gmail.com', '123', '2022-05-05 23:52:03', 1, '1'),
 (4, 'Leona', '21346579845', 'leonaa@gmail.com', '123', '2022-05-06 09:19:07', 0, '2'),
 (6, 'Jane Gomes', '65498732444', 'jane.gomes@gmail.com', '123', '2022-05-06 09:21:41', 0, '2'),
-(7, 'Jane Gomes', '65498732444', 'jane.gomes@gmail.com', '123', '2022-05-06 09:22:35', 0, '2'),
+(7, 'Jane Gomes', '14298732574', 'jane.gomes@gmail.com', '123', '2022-05-06 09:22:35', 0, '2'),
 (8, 'JoaoGomes', '14298732444', 'joe.gomes@gmail.com', '123', '2022-05-06 09:24:29', 0, '2'),
 (9, 'Lino Gomes', '96325841174', 'lino.gomes@gmail.com', '123', '2022-05-06 09:25:28', 0, '2'),
 (10, 'Imperador Palpatine', '66613246578', 'imperador@starws.com', 'password214', '2022-05-06 09:42:05', 0, '2'),
