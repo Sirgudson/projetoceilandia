@@ -43,6 +43,7 @@
                         <i class="fas fa-lock icon-modify"></i>
                         <input type="password" name="senha" id="senha" placeholder="Senha">
                     </label>
+                    <input type="hidden" name="ativo" id="ativo" value="1">
                     
                     <button class="btn btn-second" type="submit">criar</button>        
                 </form>

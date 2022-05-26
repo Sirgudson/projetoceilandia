@@ -11,13 +11,14 @@ class ClienteDAO {
     public function salvar( ClienteDTO $clienteDTO ) {
         try {
             $sql = "INSERT INTO "
-                . "tb_usuarios(nome,cpf,email,password) "
-                . "VALUES(:nome,:cpf,:email,:senha)";
+                . "tb_usuarios(nome,cpf,email,password,ativo) "
+                . "VALUES(:nome,:cpf,:email,:senha,:ativo)";
             $stmt = $this->pdo->prepare( $sql );
             $stmt->bindValue( ":nome", $clienteDTO->getNome() );
             $stmt->bindValue( ":cpf", $clienteDTO->getCpf() );
             $stmt->bindValue( ":email", $clienteDTO->getEmail() );
             $stmt->bindValue( ":senha", $clienteDTO->getSenha() );
+            $stmt->bindValue( ":ativo", $clienteDTO->getSituacao() );
             return $stmt->execute();
         } catch ( PDOException $e ) {
             echo "Erro ao cadastrar: ", $e->getMessage();
@@ -26,7 +27,19 @@ class ClienteDAO {
 
     public function findAll() {
         try {
-            $sql = "SELECT * FROM tb_usuarios";
+            $sql = "SELECT * FROM tb_usuarios WHERE ATIVO = 1";
+            $stmt = $this->pdo->prepare( $sql );
+            $stmt->execute();
+            $usuarios = $stmt->fetchAll( PDO::FETCH_ASSOC );
+            return $usuarios;
+        } catch ( PDOException $e ) {
+            echo "Erro ao listar os usuarios: ", $e->getMessage();
+        }
+    }
+
+    public function findAllInativos() {
+        try {
+            $sql = "SELECT * FROM tb_usuarios WHERE ATIVO = 0";
             $stmt = $this->pdo->prepare( $sql );
             $stmt->execute();
             $usuarios = $stmt->fetchAll( PDO::FETCH_ASSOC );
@@ -63,14 +76,15 @@ class ClienteDAO {
     public function update( ClienteDTO $clienteDTO ) {
         try {
             $sql = "UPDATE tb_usuarios SET "
-                . "nome=?, cpf=?, email=?, password=? "
+                . "nome=?, cpf=?, email=?, password=?, ativo=? "
                 . "WHERE id=?";
             $stmt = $this->pdo->prepare( $sql );
             $stmt->bindValue( 1, $clienteDTO->getNome() );
             $stmt->bindValue( 2, $clienteDTO->getCpf() );
             $stmt->bindValue( 3, $clienteDTO->getEmail() );
             $stmt->bindValue( 4, $clienteDTO->getSenha() );
-            $stmt->bindValue( 5, $clienteDTO->getId() );
+            $stmt->bindValue( 5, $clienteDTO->getSituacao() );
+            $stmt->bindValue( 6, $clienteDTO->getId() );
             return $stmt->execute();
 
         } catch ( PDOException $e ) {

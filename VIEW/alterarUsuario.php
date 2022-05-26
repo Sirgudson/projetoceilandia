@@ -37,6 +37,16 @@ $usuario = $clienteDAO->findById( $idUsuario );
                     <td><input type="text" name="senha" id="senha" value="<?php echo $usuario["PASSWORD"] ?>"></td>
                 </tr>
                 <tr>
+                    <td>Situação:</td>
+                </tr>
+                <tr>
+                    <td><input type="hidden" name="ativo" id="ativo" value="<?php echo $usuario["ATIVO"] ?>"></td>
+                    <td><input type="radio" id="1" name="ativo" value="1">
+                    <label for="ativo">Ativado</label></td>
+                    <td><input type="radio" id="0" name="ativo" value="0">
+                    <label for="ativo">Desativado</label></td>
+                </tr>
+                <tr>
                     <td colspan="2">
                         <input type="submit" value="Alterar">
                     </td>

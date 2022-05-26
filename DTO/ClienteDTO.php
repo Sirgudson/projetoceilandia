@@ -6,6 +6,7 @@ class ClienteDTO {
     private $cpf;
     private $email;
     private $senha;
+    private $situacao;
 
 
     public function getId() {
@@ -37,6 +38,12 @@ class ClienteDTO {
     }
     public function setSenha( $senha ){
         $this->senha = $senha;
+    }
+    public function getSituacao(){
+        return $this->situacao;
+    }
+    public function setSituacao( $situacao ){
+        $this->situacao = $situacao;
     }
 
 }
