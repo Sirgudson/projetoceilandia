@@ -45,7 +45,7 @@
           <li><a class="link_name" href="#">Usuários</a></li>
           <a href="#"></a>
           <li><a href="#" onclick="carregarIframe('listarUsuario.php')">Todos</a></li>
-          <li><a href="../VIEW/login.php">Cadastrar</a></li>
+          <li><a href="#" onclick="carregarIframe('listarUsuariosInativos.php')">Inativos</a></li>
         </ul>
       </li>
 
