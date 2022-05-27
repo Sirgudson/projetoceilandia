@@ -11,12 +11,13 @@ class PontoDAO {
     public function salvar( PontoDTO $pontoDTO ) {
         try {
             $sql = "INSERT INTO "
-                . "tb_eventos(local,titulo,descricao) "
-                . "VALUES(:local,:titulo,:descricao)";
+                . "tb_eventos(local,titulo,descricao,foto) "
+                . "VALUES(:local,:titulo,:descricao,:foto)";
             $stmt = $this->pdo->prepare( $sql );
             $stmt->bindValue( ":local", $pontoDTO->getLocal() );
             $stmt->bindValue( ":titulo", $pontoDTO->getTitulo() );
             $stmt->bindValue( ":descricao", $pontoDTO->getDescricao() );
+            $stmt->bindValue( ':foto', $pontoDTO->getFoto() );
             return $stmt->execute();
         } catch ( PDOException $e ) {
             echo "Erro ao cadastrar novo Ponto Turístico: ", $e->getMessage();

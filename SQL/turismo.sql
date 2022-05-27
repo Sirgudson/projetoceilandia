@@ -32,10 +32,16 @@ DEFAULT CHARACTER SET = utf8;
 -- Extraindo dados da tabela `tb_eventos`
 --
 
-INSERT INTO `tb_eventos` (`ID`, `LOCAL`, `TITULO`, `DESCRICAO`, `DATA_INICIO`, `DATA_TERMINO`, `CAPACIDADE`, `ATIVO`) VALUES
-(1, 'Ceilândia', 'Casa do Cantador', 'A Casa do Cantador, localizada em Ceilândia - DF, é o espaço cultural mais importante da Cidade, que abarca todos os movimentos artísticos e culturais do local.', NULL, NULL, '1', 0),
-(2, 'Ceilândia Sul', 'Estádio Maria de Lourdes Abadia', 'O Estádio Maria de Lourdes Abadia, conhecido popularmente como Abadião, é um estádio de esportes brasileiro, situado em Ceilândia, no Distrito Federal. ', NULL, NULL, '1', 0),
-(3, 'Ceilândia Norte', 'Centro Olímpico do Setor O', 'O programa desenvolvido pela Secretaria de Esporte e Lazer atua nas regiões administrativas do Distrito Federal por meio de parcerias público-privadas. ', NULL, NULL, '1', 0);
+INSERT INTO `tb_eventos` (`ID`, `LOCAL`, `TITULO`, `DESCRICAO`, `DATA_INICIO`, `DATA_TERMINO`, `CAPACIDADE`, `FOTO`, `ATIVO`) VALUES
+(1, 'Ceilândia', 'Casa do Cantador', 'A Casa do Cantador, localizada em Ceilândia - DF, é o espaço cultural mais importante da Cidade, que abarca todos os movimentos artísticos e culturais do local.', NULL, NULL, '1', NULL, 0),
+(2, 'Ceilândia Sul', 'Estádio Maria de Lourdes Abadia', 'O Estádio Maria de Lourdes Abadia, conhecido popularmente como Abadião, é um estádio de esportes brasileiro, situado em Ceilândia, no Distrito Federal. ', NULL, NULL, '1', NULL, 0),
+(3, 'Ceilândia Norte', 'Centro Olímpico do Setor O', 'O programa desenvolvido pela Secretaria de Esporte e Lazer atua nas regiões administrativas do Distrito Federal por meio de parcerias público-privadas. ', NULL, NULL, '1', NULL, 0),
+(4, 'ISSO É UM TESTE', 'TESTE', 'ESSE E O TESTE ALFA', NULL, NULL, '1', NULL, 0),
+(5, 'Ceilândia Sul', 'ESSS', 'A Casa do Cantador, localizada em Ceilândia - DF, é o espaço cultural mais importante da Cidade, que abarca todos os movimentos artísticos e culturais do local.', NULL, NULL, '1', NULL, 0),
+(8, 'TESTEEEE', 'Centro Olímpico do Setor O', 'A Casa do Cantador, localizada em Ceilândia - DF, é o espaço cultural mais importante da Cidade, que abarca todos os movimentos artísticos e culturais do local. ', NULL, NULL, '1', '6290207d91d62.jpg', 0),
+(9, 'Ceilândia Sul', 'Casa do Cantador', 'asa do Cantador, localizada em Ceilândia - DF, é o espaço cultural mais importante da Cidade, que abarca todos os movimentos artísticos e culturais do local. ', NULL, NULL, '1', '6290250deee47.jpg', 0),
+(10, 'CHAMPSON CITY', 'Centro Olímpico do Setor O', 'A Casa do Cantador, localizada em Ceilândia - DF, é o espaço cultural mais importante da Cidade, que abarca todos os movimentos artísticos e culturais do local.', '2022-05-11 22:55:00', '2022-05-11 23:44:00', '21', '629028d9c03e2.jpeg', 0),
+(11, 'Outro teste', 'centro de testes', 'A Casa do Cantador, localizada em Ceilândia - DF, é o espaço cultural mais importante da Cidade, que abarca todos os movimentos artísticos e culturais do local.', '2022-05-27 12:55:00', '2022-05-27 22:44:00', '210', '62902b2cae013.png', 0);
 
 -- -----------------------------------------------------
 -- Table `turismo`.`tb_arquivos_eventos`
