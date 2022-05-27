@@ -25,7 +25,7 @@ echo "      <th>Nome</th>";
 echo "      <th>CPF</th>";
 echo "      <th>Email</th>";
 echo "      <th>Editar</th>";
-echo "      <th>Excluir Permanentemente</th>";
+echo "      <th>Excluir</th>";
 echo "  </tr>";
 
 foreach ( $usuarios as $usuario ) {

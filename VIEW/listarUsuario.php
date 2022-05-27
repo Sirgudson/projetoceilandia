@@ -21,20 +21,20 @@ echo "<div class='container-list'>";
 echo "<h1><b>Usuários</b></h1>";
 echo "<table>";
 echo "  <tr>";
+echo "      <th>Editar</th>";
 echo "      <th>Nome</th>";
 echo "      <th>CPF</th>";
-echo "      <th>Email</th>";
-echo "      <th>Editar</th>";
-echo "      <th>Excluir</th>";
+echo "      <th>E-mail</th>";
+//echo "      <th>Excluir</th>";
 echo "  </tr>";
 
 foreach ( $usuarios as $usuario ) {
     echo "<tr>";
+    echo "  <td align='center'><a href='alterarUsuario.php?id={$usuario["ID"]}'><i class='icon fa-solid fa-user-pen'></a></i></td>";
     echo "  <td> {$usuario["NOME"]}</td>";
     echo "  <td>", formatarCpfCnpj( $usuario["CPF"] ), "</td>";
     echo "  <td> {$usuario["EMAIL"]} </td>";
-    echo "  <td align='center'><a href='alterarUsuario.php?id={$usuario["ID"]}'><i class='icon fa-solid fa-user-pen'></a></i></td>";
-    echo "  <td align='center'><a href='../controller/excluirUsuarioController.php?id={$usuario["ID"]}'><i class='delete fa-solid fa-user-xmark'></a></i></td>";
+    //echo "  <td align='center'><a href='../controller/excluirUsuarioController.php?id={$usuario["ID"]}'><i class='delete fa-solid fa-user-xmark'></a></i></td>";
     echo "</tr>";
 }
 echo "</table>";
