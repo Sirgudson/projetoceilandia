@@ -32,6 +32,12 @@ $ponto = $pontoDAO->findById( $idPonto );
                     <td>Descrição:</td>
                     <td><input type="text" name="descricao" value="<?php echo $ponto["DESCRICAO"] ?>"></td>
                 </tr>
+                <td><img src="../ASSETS/PONTOS/foto/<?php echo $ponto["FOTO"] ?>" width="200"/></td>
+                </tr>
+                <tr>
+                    <td>Foto:</td>
+                    <td><input type="file" name="foto" id="foto"></td>
+                </tr>
                 <tr>
                     <td colspan="2">
                         <input type="submit" value="Alterar">
