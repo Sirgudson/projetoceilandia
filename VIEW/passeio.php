@@ -49,11 +49,13 @@
                         Localização: {$evento["LOCAL"]}
                     </p>";
             echo "<p class='inicio_evento'>
-                        Quando começa: {$evento["DATA_INICIO"]}
-                    </p>";
+                        Quando começa: ", date( "d/m/Y H:i:s", strtotime( $evento["DATA_INICIO"] ) ),
+                        
+                    "</p>";
             echo "<p class='termino_evento'>
-                        Quando termina: {$evento["DATA_TERMINO"]}
-                    </p>";
+            Quando começa: ", date( "d/m/Y H:i:s", strtotime( $evento["DATA_TERMINO"] ) ),
+                        
+            "</p>";
             echo "</div>";
             echo "</div>";
             echo "</div>";
