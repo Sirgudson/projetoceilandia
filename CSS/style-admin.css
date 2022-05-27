@@ -337,9 +337,9 @@
   background-color: #F8B86E;;
   color: #000000;
   border: 0px solid #ffffff;
-         text-align: center;
-         font-size: 14px;
-         text-align: center;
+  text-align: center;
+  font-size: 14px;
+  text-align: center;
   padding: 10px 0px 20px 20px;
 }
 .container-table tr{
@@ -381,6 +381,81 @@
 }
 
 /* -------- ALTERAR USUÁRIO -------- */
+.container-alterarUS {
+  /*background-color: #CCD8E6;*/
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+.alterarUS-form {
+  height: 450px;
+  background-color: #EEF0F7;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+  line-height: 1.5;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.185);
+}
+.alterarUS-form::after {
+  content: '';
+  position: absolute;
+  background-image: linear-gradient(to bottom right, #9effff, #FFD07E);
+  width: 900px;
+  height: 900px;
+  border-radius: 50%;
+  z-index: -1;
+}
+.alterarUS-form-close {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  width: 45px;
+  height: 45px;
+  display: grid;
+  place-items: center;
+  font-size: 1.7rem;
+  color: #2E4052;
+  border-radius: 50%;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.164);
+  background-color: #fff;
+  cursor: pointer;
+}
+.img-alterarUS {
+  width: 250px;
+  height: 400px;
+  object-fit: cover;
+  object-position: center;
+}
+.container-alterarUS input,
+button {
+  width: 100%;
+  border: none;
+  padding: 14px;
+  border-radius: 3px;
+}
+.container-alterarUS input {
+  border: 2px solid #DADDEC;
+  margin: 5px 0 10px;
+  font-size: 1rem;
+  color: #656880;
+}
+
+.container-alterarUS button {
+  background-image: linear-gradient(to right, #89CAFF, #6589FF);
+  display: block;
+  font-size: 1rem;
+  color: #fff;
+  margin-top: 20px;
+  cursor: pointer;
+  box-shadow: 0 5px 20px #89caff94;
+  transition: box-shadow .3s ease-in-out;
+}
+
+.container-alterarUS button:hover {
+  box-shadow: none;
+}
 
 /*.container-admin{
   background-color: #CCD8E6;
