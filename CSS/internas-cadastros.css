@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+}
+
+/* -------- CADASTRO PONTO E PASSEIOS -------- */
+.container-cadastro {
+  /*background-color: #CCD8E6;*/
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+.cadastro-form {
+  height: 580px;
+  background-color: #EEF0F7;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.185);
+}
+.cadastro-form::after {
+  content: '';
+  position: absolute;
+  background-image: linear-gradient(to bottom right, #9effff, #FFD07E);
+  width: 900px;
+  height: 900px;
+  border-radius: 50%;
+  z-index: -1;
+}
+.cadastro-form-close {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  width: 45px;
+  height: 45px;
+  display: grid;
+  place-items: center;
+  font-size: 1.7rem;
+  color: #2E4052;
+  border-radius: 50%;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.164);
+  background-color: #fff;
+  cursor: pointer;
+}
+.img-cadastro {
+  width: 350px;
+  height: 500px;
+  object-fit: cover;
+  object-position: center;
+}
+.container-cadastro input,
+button, textarea {
+  width: 100%;
+  border: none;
+  padding: 14px;
+  border-radius: 3px;
+}
+.container-cadastro input,
+textarea {
+  border: 2px solid #DADDEC;
+  margin: 5px 0 10px;
+  font-size: 1rem;
+  color: #656880;
+}
+
+.container-cadastro button {
+  background-image: linear-gradient(to right, #89CAFF, #6589FF);
+  display: block;
+  font-size: 1rem;
+  color: #fff;
+  margin-top: 20px;
+  cursor: pointer;
+  box-shadow: 0 5px 20px #89caff94;
+  transition: box-shadow .3s ease-in-out;
+}
+
+.container-cadastro button:hover {
+  box-shadow: none;
+}

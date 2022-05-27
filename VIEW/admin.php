@@ -61,7 +61,7 @@
         <ul class="sub-menu">
           <li><a class="link_name" href="#">Pontos Turísticos</a></li>
           <li><a href="#" onclick="carregarIframe('listarPonto.php')">Todos</a></li>
-          <li><a href="#">Cadastrar</a></li>
+          <li><a href="#" onclick="carregarIframe('cadastrarPonto.php')">Cadastrar</a></li>
         </ul>
       </li>
 
