@@ -33,8 +33,10 @@
 
         ?>
             <div class="box-ponto">
-                <img src="../ASSETS/IMAGES/casa-cantador.jpeg" alt="" id="img-ponto">
             <?php
+            echo "<div class='foto_ponto' id='img-ponto'>";?>
+                        <img src="../ASSETS/PONTOS/foto/<?php echo $ponto['FOTO'] ?>" alt="" width="550" height="500"/><?php
+                        
             echo "<div class='title_ponto'>
                         <span>{$ponto["TITULO"]}</span>";
 
@@ -45,6 +47,7 @@
             echo "<p class='descricao_ponto'>
                         Localização: {$ponto["LOCAL"]}
                     </p>";
+            echo "</div>";
             echo "</div>";
             echo "</div>";
             echo "</div>";
