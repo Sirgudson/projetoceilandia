@@ -456,30 +456,3 @@ button {
 .container-alterarUS button:hover {
   box-shadow: none;
 }
-
-/*.container-admin{
-  background-color: #CCD8E6;
-  width: 100%;
-  height: 100%;
-
-}
-
-.flex-container{
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-
-.menu{
-  margin-block-end: auto;
-  margin-left: 230px;
-  }
-
-
-.flex-container > div > a {
-  font-family: 'Raleway';
-  font-style: normal;
-  color: #fafafb;
-  text-decoration: none;
-  text-shadow: 0 0 2px #000;
-}
