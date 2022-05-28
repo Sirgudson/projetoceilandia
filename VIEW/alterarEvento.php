@@ -2,10 +2,13 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Alterar Evento</title>
+    <link rel="stylesheet" href="../LIB/fontawesome-free-6.1.1-web/css/all.min.css">
+    <link rel="shortcut icon" href="../ASSETS/ICO/logo1.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../CSS/internas-cadastros.css">
+    <script src="../LIB/fontawesome-free-6.1.1-web/js/all.min.js"></script>
 </head>
 
 <body>
@@ -16,8 +19,9 @@ $eventoDAO = new EventoDAO();
 $evento = $eventoDAO->findById( $idEvento );
 
 ?>
-    <fieldset>
-        <legend>Alterar Evento</legend>
+    <div class="container-cadastro">
+        <div class="cadastro-form cadastro-formEvento">
+        <img class="img-cadastro" src="../ASSETS/IMAGES/caixadagua-depois.webp" alt="">
         <form id="formCadastrarEvento" action="../CONTROLLER/alterarEventoController.php" enctype="multipart/form-data" method="post">
             <input type="hidden" name="idEvento" value="<?php echo $evento["ID"] ?>">
             <table>
@@ -54,12 +58,13 @@ $evento = $eventoDAO->findById( $idEvento );
                 </tr>
                 <tr>
                     <td colspan="2">
-                        <input type="submit" value="Alterar">
+                        <button type="submit" value="Alterar">Alterar</button>
                     </td>
                 </tr>
             </table>
         </form>
-    </fieldset>
+        </div>
+    </div>
 </body>
 
 </html>

@@ -49,6 +49,9 @@
   background-color: #fff;
   cursor: pointer;
 }
+.cadastro-form table {
+  margin: 10px;
+}
 .img-cadastro {
   width: 350px;
   height: 500px;
@@ -79,8 +82,32 @@ textarea {
   cursor: pointer;
   box-shadow: 0 5px 20px #89caff94;
   transition: box-shadow .3s ease-in-out;
+  width: 60% !important;
+  margin-left: 70px;
 }
 
 .container-cadastro button:hover {
   box-shadow: none;
+}
+
+.cadastro-formEvento {
+  height: 750px;
+  background-color: #EEF0F7;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.185);
+}
+.cadastro-formEvento::after {
+  content: '';
+  position: absolute;
+  background-image: linear-gradient(to bottom right, #9effff, #FFD07E);
+  width: 1000px;
+  height: 1000px;
+  border-radius: 50%;
+  z-index: -1;
+}
+.cadastro-formEvento table {
+  margin: 10px;
 }
