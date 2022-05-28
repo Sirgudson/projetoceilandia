@@ -76,8 +76,8 @@
 
         <ul class="sub-menu">
           <li><a class="link_name" href="#">Passeios</a></li>
-          <li><a href="#">Todos</a></li>
-          <li><a href="#">Cadastrar</a></li>
+          <li><a href="#" onclick="carregarIframe('listarEvento.php')">Todos</a></li>
+          <li><a href="#" onclick="carregarIframe('cadastrarEvento.php')">Cadastrar</a></li>
         </ul>
       </li>
 

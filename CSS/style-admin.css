@@ -220,10 +220,11 @@
   left: 260px;
   width: calc(100% - 260px);
   transition: all 0.5s ease;
+  overflow: hidden;
 }
 .sidebar.close ~ .home-section{
   left: 78px;
-  width: calc(100% - 78px);
+  width: calc(100vw - 78px);
 }
 .home-section .home-content{
   height: 60px;
@@ -247,7 +248,7 @@
   width: calc(100vw - 78px);
   height: calc(100vh - 60px);
   transition: all 0.3s ease-in-out;
-  padding-left: 200px;
+  
 }
 #iframe.active {
   width: calc(100vw - 260px);
@@ -283,8 +284,8 @@
   justify-content: center;
   width: 80%;
   transition: all 0.5s ease;
-  height: 60%;  
-  position: absolute;
+  height: 60%; 
+  margin: 0 auto;
 }
 .container-list h1 {
   text-align: center;
@@ -309,6 +310,7 @@
 }
 .container-list tr{
   background-color: #fff;
+  height: 40px;
 }
 .container-list tr:nth-child(odd){
   background-color: #eea29012;
@@ -325,7 +327,6 @@
   text-align: center;
   border-collapse: collapse;
   box-shadow: 5px 8px #888888;
-  margin-left: 100px;
 }
 .container-table h1 {
   text-align: center;
