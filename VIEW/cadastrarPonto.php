@@ -43,35 +43,7 @@
         </form>
         </div>
 </div>
-    <div style="text-align: center;">
-        <?php
-if ( isset( $_GET["msg"] ) ) {
-    echo $_GET["msg"];
-}
-?>
-    </div>
-    <script>
-        $( "#formCadastrarPonto" ).validate({
-            rules: {
-                local: {
-                    required: true,
-                },
-                titulo: {
-                    required: true,
-                }
-            },
-            messages: {
 
-                local: {
-                    required: "Campo obrigatório!",
-                },
-                titulo:{
-                    required: "Título do Ponto turístico obrigatório!",
-                }
-
-            }
-        });
-    </script>
 </body>
 
 </html> 

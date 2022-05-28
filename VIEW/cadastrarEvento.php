@@ -2,18 +2,19 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-    <script src="../js/jquery-3.6.0.min.js"></script>
-    <script src="../js/jquery.mask.min.js"></script>
-    <script src="../js/jquery-validation-1.19.3/dist/jquery.validate.min.js"></script>
+    <title>Cadastrar Evento</title>
+    <link rel="stylesheet" href="../LIB/fontawesome-free-6.1.1-web/css/all.min.css">
+    <link rel="shortcut icon" href="../ASSETS/ICO/logo1.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../CSS/internas-cadastros.css">
+    <script src="../LIB/fontawesome-free-6.1.1-web/js/all.min.js"></script>
 </head>
 
 <body>
-    <fieldset>
-        <legend>Cadastrar novo Evento </legend>
+<div class="container-cadastro">
+        <div class="cadastro-formEvento">
+            <img class="img-cadastro" src="../ASSETS/IMAGES/caixadagua-depois.webp" alt="">
         <form id="formCadastrarEvento" action="../controller/cadastrarEventoController.php" enctype="multipart/form-data" method="post">
             <table>
                 <tr>
@@ -26,7 +27,7 @@
                 </tr>
                 <tr>
                     <td><label for="descricao">Descrição do Evento:</label></td>
-                    <td><input type="text" name="descricao" id="descricao"></td>
+                    <td><textarea type="text" name="descricao" id="descricao" cols="30" rows="10"></textarea></td>
                 </tr>
                 <tr>
                     <td><label for="descricao">Início do Evento:</label></td>
@@ -46,12 +47,13 @@
                 </tr>
                 <tr>
                     <td colspan="2">
-                        <input type="submit" value="Cadastrar">
+                        <button type="submit" value="Cadastrar">Cadastrar</button>
                     </td>
                 </tr>
             </table>
         </form>
-    </fieldset>
+        </div>
+</div>
     <div style="text-align: center;">
         <?php
 if ( isset( $_GET["msg"] ) ) {
