@@ -1,4 +1,9 @@
 <!DOCTYPE html>
+<?php
+require_once '../DAO/UsuarioDAO.php';
+session_start();
+$_SESSION['TIPO']="1"
+?>
 <html lang="PT_br">
 
 <head>
@@ -101,7 +106,7 @@
             <div class="profile_name">Sair?</div>
             <div class="job">Projeto Ceilândia</div>
           </div>
-          <a href="../VIEW/index.php"><i class='bx bx-log-out' id="log-aut" onclick="log_out()"></i></a>
+          <a href="../VIEW/logout.php"><i class='bx bx-log-out' id="log-aut" onclick="log_out()"></i></a>
         </div>
       </li>
     </ul>
@@ -114,7 +119,7 @@
     </div>
     <iframe src="" frameborder="0"  id="iframe"></iframe>
   </section>
-  
+
   <script>
     let arrow = document.querySelectorAll(".arrow");
     const iframe = document.querySelector("#iframe");

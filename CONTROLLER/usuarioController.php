@@ -10,8 +10,14 @@
     $usuario    = $UsuarioDAO->findByEmailSenha( $email, $senha );
 
     if ( !empty( $usuario ) ) {
-        $_SESSION["usuario"] = $usuario["email"];
-        header( "Location: ../VIEW/admin.php" );
+        $_SESSION["id"] = $usuario["id"];
+
+        if ( $usuario['tipo'] == '1' ) {
+            header( "Location: ../VIEW/admin.php" );
+        } else if ( $usuario['tipo'] == '2' ) {
+            header( "Location: ../VIEW/pontoturistico.php" );
+        }
+
     } else {
     ?>
     <div class="alert alert-danger" role="alert">

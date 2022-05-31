@@ -10,7 +10,7 @@ class UsuarioDAO {
 
     public function findByEmailSenha( $email, $senha ) {
         try {
-            $sql = "SELECT * FROM tb_usuarios " 
+            $sql = "SELECT email, id, tipo FROM tb_usuarios "
                 . "WHERE email=? AND password=?";
             $stmt = $this->pdo->prepare( $sql );
             $stmt->bindValue( 1, $email );
@@ -23,9 +23,9 @@ class UsuarioDAO {
         }
     }
 
-    public function deleteById($idUsuario){
+    public function deleteById( $idUsuario ) {
         try {
-            $sql = 'DELETE FROM tb_usuario WHERE id = ?';
+            $sql  = 'DELETE FROM tb_usuario WHERE id = ?';
             $stmt = $this->pdo->prepare( $sql );
             $stmt->bindValue( 1, $idUsuario );
             return $stmt->execute();
