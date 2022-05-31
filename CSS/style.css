@@ -231,15 +231,15 @@ h4.text-cultura2{
 }
 
 .equipe {
-        width: 1300px;
-        height: 420px;
-        display: grid;
-        grid-template-columns: 35% 65%;
-        grid-area: equipe;
-        margin: auto;
-        background-color: red;
-        margin-top: 5%;
-        position: relative
+    width: 1300px;
+    height: 420px;
+    display: grid;
+    grid-template-columns: 35% 65%;
+    grid-area: equipe;
+    margin: auto;
+    background-color: red;
+    margin-top: 5%;
+    position: relative
 }
 
 .equipe2 {

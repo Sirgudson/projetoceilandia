@@ -33,24 +33,23 @@
 
         ?>
             <div class="box-ponto">
-            <?php
-            echo "<div class='foto_ponto' id='img-ponto'>";?>
-                        <img src="../ASSETS/PONTOS/foto/<?php echo $ponto['FOTO'] ?>" alt="" width="550" height="500"/><?php
+                <?php
+                //echo "<div class='foto_ponto' id='img-ponto'>";?>
+                        <img class="img-ponto" src="../ASSETS/PONTOS/foto/<?= $ponto['FOTO'] ?>" alt="" width="550" height="500"/><?php
+                //echo "</div>";
                         
-            echo "<div class='title_ponto'>
+                echo "<div class='title_ponto'>
                         <span>{$ponto["TITULO"]}</span>";
 
-            echo "<p class='descricao_ponto'>
+                echo "<p class='descricao_ponto'>
                         {$ponto["DESCRICAO"]}
                     </p>";
 
-            echo "<p class='descricao_ponto'>
+                echo "<p class='descricao_ponto'>
                         Localização: {$ponto["LOCAL"]}
                     </p>";
-            echo "</div>";
-            echo "</div>";
-            echo "</div>";
-            echo "</div>";
+                echo "</div>";
+                echo "</div>";
         }
             ?>
             </div>

@@ -34,7 +34,7 @@
                     </tr>
                     <tr>
                         <td>Descrição:</td>
-                        <td><textarea cols="30" rows="10"><input name="descricao" value="<?php echo $ponto["DESCRICAO"] ?>"></textarea></td>
+                        <td><input name="descricao" value="<?php echo $ponto["DESCRICAO"] ?>"></td>
                     </tr>
                     <td><img src="../ASSETS/PONTOS/foto/<?php echo $ponto["FOTO"] ?>" width="200" /></td>
                     </tr>
