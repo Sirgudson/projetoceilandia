@@ -14,7 +14,7 @@
 
 <body>
     <!-- HEADER -->
-    <?php include('header.php'); ?>
+    <?php include 'header.php';?>
     <div class="apresentacao">
         <h1 class="titulo">Passeio</h1>
         <img src="../ASSETS/IMAGES/onda1.png" alt="onda1">
@@ -22,52 +22,58 @@
     <div class="container-evento">
 
         <?php
-        require_once '../DAO/EventoDAO.php';
-        include '../JS/funcao.php';
-        $eventoDAO = new EventoDAO();
-        $eventos = $eventoDAO->findAll();
+            require_once '../DAO/EventoDAO.php';
+            include '../JS/funcao.php';
+            $eventoDAO = new EventoDAO();
+            $eventos   = $eventoDAO->findAll();
 
-        foreach ($eventos as $evento) {
+            foreach ( $eventos as $evento ) {
 
-        ?>
+            ?>
             <div class="box-evento">
             <?php
-            echo "<div class='foto_evento' id='img-evento'>";?>
+            echo "<div class='foto_evento' id='img-evento'>"; ?>
                         <img src="../ASSETS/EVENTOS/foto/<?php echo $evento['FOTO'] ?>" alt="" width="550" height="500"/><?php
-                        
-            echo "<div class='title_evento'>
+
+        echo "<div class='title_evento'>
                         <span>{$evento["TITULO"]}</span>";
 
-            echo "<p class='descricao_evento'>
+        echo "<p class='descricao_evento'>
                         {$evento["DESCRICAO"]}
                     </p>";
-            echo "<p class='capacidade_evento'>
+        echo "<p class='capacidade_evento'>
                         Capacidade: {$evento["CAPACIDADE"]} Pessoas
                     </p>";
 
-            echo "<p class='descricao_evento'>
+        echo "<p class='descricao_evento'>
                         Localização: {$evento["LOCAL"]}
                     </p>";
-            echo "<p class='inicio_evento'>
+        echo "<p class='inicio_evento'>
                         Quando começa: ", date( "d/m/Y H:i:s", strtotime( $evento["DATA_INICIO"] ) ),
-                        
-                    "</p>";
-            echo "<p class='termino_evento'>
-            Quando começa: ", date( "d/m/Y H:i:s", strtotime( $evento["DATA_TERMINO"] ) ),
-                        
+
             "</p>";
-            echo "</div>";
-            echo "</div>";
-            echo "</div>";
-            echo "</div>";
-        }
-            ?>
+        echo "<p class='termino_evento'>
+            Quando começa: ", date( "d/m/Y H:i:s", strtotime( $evento["DATA_TERMINO"] ) ),
+
+            "</p>";
+
+        echo "<p class='agendar'>
+            <a href='agendamento.php?id={$evento['ID']}'>Agendar </a>",
+
+            "</p>";
+
+        echo "</div>";
+        echo "</div>";
+        echo "</div>";
+        echo "</div>";
+    }
+?>
             </div>
     </div>
 
 
     <!-- FOOTER -->
-    <?php include('footer.php') ?>
+    <?php include 'footer.php'?>
 </body>
 
 </html>

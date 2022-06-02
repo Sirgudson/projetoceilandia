@@ -12,7 +12,7 @@ class AvaliacaoDAO {
         try {
             $sql = "INSERT INTO "
                 . "tb_avaliacao(nome,opiniao,avaliacao) "
-                . "VALUES(:local,:opiniao,:avaliacao)";
+                . "VALUES(:nome,:opiniao,:avaliacao)";
             $stmt = $this->pdo->prepare( $sql );
             $stmt->bindValue( ":nome", $avaliacaoDTO->getNome() );
             $stmt->bindValue( ":opiniao", $avaliacaoDTO->getOpiniao() );
@@ -25,7 +25,7 @@ class AvaliacaoDAO {
 
     public function findAll() {
         try {
-            $sql = "SELECT * FROM tb_avaliacao";
+            $sql  = "SELECT * FROM tb_avaliacao";
             $stmt = $this->pdo->prepare( $sql );
             $stmt->execute();
             $avaliações = $stmt->fetchAll( PDO::FETCH_ASSOC );
@@ -37,7 +37,7 @@ class AvaliacaoDAO {
 
     public function deleteById( $idAvaliacao ) {
         try {
-            $sql = "DELETE FROM tb_avaliacao WHERE id = ?";
+            $sql  = "DELETE FROM tb_avaliacao WHERE id = ?";
             $stmt = $this->pdo->prepare( $sql );
             $stmt->bindValue( 1, $idAvaliacao );
             return $stmt->execute();
@@ -48,7 +48,7 @@ class AvaliacaoDAO {
 
     public function findById( $id ) {
         try {
-            $sql = "SELECT * FROM tb_avaliacao WHERE id = ?";
+            $sql  = "SELECT * FROM tb_avaliacao WHERE id = ?";
             $stmt = $this->pdo->prepare( $sql );
             $stmt->bindValue( 1, $id );
             $stmt->execute();

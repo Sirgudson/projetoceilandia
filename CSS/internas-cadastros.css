@@ -111,3 +111,9 @@ textarea {
 .cadastro-formEvento table {
   margin: 10px;
 }
+
+@page {
+  size: auto;
+  size: A4;
+  margin: 0mm;
+}
