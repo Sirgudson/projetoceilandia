@@ -54,7 +54,7 @@
             <div class="list_avaliacao">
                 <div class="rating__item">
                     <input class="avaliacao_input rating--1" id="rating-1-2" type="radio" value="1" name="avaliacao" />
-                    <label class="avaliacao_label rating--1" for="rating-1-2"><i class="fa-regular fa-star"></i></label>
+                    <label class="avaliacao_label rating--1" for="rating-1-2"><i class="fa fa-regular fa-star"></i></label>
                 </div>
                 <div class="rating__item">
                     <input class="avaliacao_input rating--2" id="rating-2-2" type="radio" value="2" name="avaliacao" />
@@ -79,7 +79,7 @@
         <div class="comentario">
             <textarea placeholder="Escreva sua avaliação aqui!"></textarea>
             <input type="text" name="nome" id="nome" placeholder="Nome">
-            <button class="submit">Avaliar</button>
+            <input type="submit" value="Cadastrar">
         </div>
     </form>
     <?php
@@ -89,46 +89,22 @@
     ?>
     </div>
     <script>
-        $('button.submit').disabled = true; // disable button on load
+        //querySelector('svg.fa-star') //trocar classe da star
+        let avaliacoes = document.querySelectorAll(".avaliacao_input");
+        avaliacoes.forEach(teste);
 
-        // Enable button 
-        function enable_submit() {
-            $('button.submit').disabled = false;
-            $('button.submit').addClass('not-disabled');
-        }
+        function teste(item) {
+            item.addEventListener('click', function() {
+                for (let i = 0; i < item.value; i++) {
+                    avaliacoes[i].nextElementSibling.classList.add('active');
+                }
+                for (let i = item.value; i < 5; i++) {
+                    avaliacoes[i].nextElementSibling.classList.remove('active');
+                }
+                //item.nextElementSibling.classList.toggle('active');
+                document.querySelector(".comentario").style.display = 'grid';
 
-        // Disable button
-        function disable_submit() {
-            $('button.submit').disabled = true;
-            $('button.submit').removeClass('not-disabled');
-        }
-
-        // Display feedback after rating 
-        $('.rating__input').on('click', function() {
-            var rating = this['value'];
-            $('.rating__label').removeClass('active');
-            $(this).siblings('.rating__label').addClass('active');
-            $('.feedback').css('display', "block");
-
-            feedback_validate(rating);
-
-        });
-
-        // Run enable button function based on input
-        $('.feedback textarea').keyup(function() {
-            if ($('.feedback textarea').val().length > 3) {
-                enable_submit();
-            }
-        });
-
-        // Enable or disable button by validation
-        function feedback_validate(val) {
-            if (val <= 3) {
-                disable_submit();
-
-            } else if (val > 3) {
-                enable_submit();
-            }
+            });
         }
     </script>
     <script>
