@@ -33,15 +33,12 @@ DEFAULT CHARACTER SET = utf8;
 --
 
 INSERT INTO `tb_eventos` (`ID`, `LOCAL`, `TITULO`, `DESCRICAO`, `DATA_INICIO`, `DATA_TERMINO`, `CAPACIDADE`, `FOTO`, `ATIVO`) VALUES
-(1, 'Ceilândia', 'Casa do Cantador', 'A Casa do Cantador, localizada em Ceilândia - DF, é o espaço cultural mais importante da Cidade, que abarca todos os movimentos artísticos e culturais do local.', NULL, NULL, '1', NULL, 0),
-(2, 'Ceilândia Sul', 'Estádio Maria de Lourdes Abadia', 'O Estádio Maria de Lourdes Abadia, conhecido popularmente como Abadião, é um estádio de esportes brasileiro, situado em Ceilândia, no Distrito Federal. ', NULL, NULL, '1', NULL, 0),
-(3, 'Ceilândia Norte', 'Centro Olímpico do Setor O', 'O programa desenvolvido pela Secretaria de Esporte e Lazer atua nas regiões administrativas do Distrito Federal por meio de parcerias público-privadas. ', NULL, NULL, '1', NULL, 0),
-(4, 'ISSO É UM TESTE', 'TESTE', 'ESSE E O TESTE ALFA', NULL, NULL, '1', NULL, 0),
-(5, 'Ceilândia Sul', 'ESSS', 'A Casa do Cantador, localizada em Ceilândia - DF, é o espaço cultural mais importante da Cidade, que abarca todos os movimentos artísticos e culturais do local.', NULL, NULL, '1', NULL, 0),
-(8, 'TESTEEEE', 'Centro Olímpico do Setor O', 'A Casa do Cantador, localizada em Ceilândia - DF, é o espaço cultural mais importante da Cidade, que abarca todos os movimentos artísticos e culturais do local. ', NULL, NULL, '1', '6290207d91d62.jpg', 0),
-(9, 'Ceilândia Sul', 'Casa do Cantador', 'asa do Cantador, localizada em Ceilândia - DF, é o espaço cultural mais importante da Cidade, que abarca todos os movimentos artísticos e culturais do local. ', NULL, NULL, '1', '6290250deee47.jpg', 0),
-(10, 'CHAMPSON CITY', 'Centro Olímpico do Setor O', 'A Casa do Cantador, localizada em Ceilândia - DF, é o espaço cultural mais importante da Cidade, que abarca todos os movimentos artísticos e culturais do local.', '2022-05-11 22:55:00', '2022-05-11 23:44:00', '21', '629028d9c03e2.jpeg', 0),
-(11, 'Outro teste', 'centro de testes', 'A Casa do Cantador, localizada em Ceilândia - DF, é o espaço cultural mais importante da Cidade, que abarca todos os movimentos artísticos e culturais do local.', '2022-05-27 12:55:00', '2022-05-27 22:44:00', '210', '62902b2cae013.png', 0);
+(12, 'Ceilândia Sul', ' Casa do Cantador', 'A Casa do Cantador, localizada em Ceilândia - DF, é o espaço cultural mais importante da Cidade, que abarca todos os movimentos artísticos e culturais do local. ', NULL, NULL, '1', '629962353656a.jpeg', 0),
+(13, 'Ceilândia Sul', 'Estádio Maria de Lourdes Abadia', 'O Estádio Maria de Lourdes Abadia, conhecido popularmente como Abadião, é um estádio de esportes brasileiro, situado em Ceilândia, no Distrito Federal. ', NULL, NULL, '1', '629962c0739f6.jpg', 0),
+(14, 'Ceilândia Norte', ' Centro Olímpico do Setor O', 'O programa desenvolvido pela Secretaria de Esporte e Lazer atua nas regiões administrativas do Distrito Federal por meio de parcerias público-privadas. ', NULL, NULL, '1', '62996303b0d1e.jpg', 0),
+(15, 'Ceilândia Norte', 'Caixa D\'àgua ', 'O local de construção do reservatório foi onde, em 1971, o governador Hélio Prates lançou a pedra fundamental de Ceilândia. O reservatório foi construído em uma altura elevada pois tinha o propósito de abastecer regiões mais elevadas, que demandavam uma pressão adequada.', NULL, NULL, '1', '629963a569ad0.jpg', 0),
+(16, 'Paróquia Senhor Bom Jesus', 'Arraiá da Paróquia Senhor Bom Jesus ', 'Paróquia localizada na EQNO 11/13 Modulo Especial Setor O, Ceilândia', '2022-06-11 19:00:00', '2022-06-12 23:00:00', '200', '629964cdccb3e.jpg', 0),
+(18, 'La Fiesta Casa Noturna', 'La Fiesta Tati Zaqui', 'Tati Zaqui na La Fiesta.\r\n\r\nO Point de Brasília.  \r\n\r\nSábado 13 de Agosto as 22:30H.\r\n\r\nDuas Pistas, DJs, Drags Cantores Locais.\r\n\r\nAniversariantes da semana do mês free mais um vip até meia noite. \r\n\r\nSorteio de Combo\r\n\r\nBrincadeiras\r\n\r\n', '2022-06-13 23:00:00', '2022-06-14 06:00:00', '2000', '629965e277646.png', 0);
 
 -- -----------------------------------------------------
 -- Table `turismo`.`tb_arquivos_eventos`
@@ -82,16 +79,13 @@ DEFAULT CHARACTER SET = utf8;
 --
 
 INSERT INTO `tb_usuarios` (`ID`, `NOME`, `CPF`, `EMAIL`, `PASSWORD`, `DATA_CADASTRO`, `ATIVO`, `TIPO`) VALUES
-(1, 'Marcelo Santos', '05115420233', 'marksantosdf@gmail.com', '123', '2022-05-05 23:31:22', 1, '1'),
-(2, 'Dhimylee Gomes', '23475623487', 'dhimylee.almeida@gmail.com', '123', '2022-05-05 23:50:05', 1, '1'),
-(3, 'Nadyr Souza', '65204892721', 'nadyr.souza@gmail.com', '123', '2022-05-05 23:52:03', 1, '1'),
-(4, 'Leona', '21346579845', 'leonaa@gmail.com', '123', '2022-05-06 09:19:07', 0, '2'),
-(6, 'Jane Gomes', '65498732444', 'jane.gomes@gmail.com', '123', '2022-05-06 09:21:41', 0, '2'),
-(7, 'Jane Gomes', '14298732574', 'jane.gomes@gmail.com', '123', '2022-05-06 09:22:35', 0, '2'),
-(8, 'JoaoGomes', '14298732444', 'joe.gomes@gmail.com', '123', '2022-05-06 09:24:29', 0, '2'),
-(9, 'Lino Gomes', '96325841174', 'lino.gomes@gmail.com', '123', '2022-05-06 09:25:28', 0, '2'),
-(10, 'Imperador Palpatine', '66613246578', 'imperador@starws.com', 'password214', '2022-05-06 09:42:05', 0, '2'),
-(11, 'Luke Skywalker', '85231465978', 'luke@jedi.com', 'darkside34576', '2022-05-06 09:42:56', 0, '2');
+(1, 'Marcelo Santos', '05115420233', 'marksantosdf@gmail.com', '202cb962ac59075b964b07152d234b70', '2022-05-05 23:31:22', 1, '1'),
+(2, 'Dhimylee Gomes', '23475623487', 'dhimylee.almeida@gmail.com', '202cb962ac59075b964b07152d234b70', '2022-05-05 23:50:05', 1, '1'),
+(3, 'Nadyr Souza', '65204892721', 'nadyr.souza@gmail.com', '202cb962ac59075b964b07152d234b70', '2022-05-05 23:52:03', 1, '1'),
+(4, 'Leona', '21346579845', 'leonaa@gmail.com', '202cb962ac59075b964b07152d234b70', '2022-05-06 09:19:07', 0, '2'),
+(5, 'Jane Gomes', '65498732444', 'jane.gomes@gmail.com', '202cb962ac59075b964b07152d234b70', '2022-05-06 09:21:41', 0, '2'),
+(6, 'Imperador Palpatine', '66613246578', 'imperador@starws.com', '202cb962ac59075b964b07152d234b70', '2022-05-06 09:42:05', 0, '2'),
+(7, 'Luke Skywalker', '85231465978', 'luke@jedi.com', '202cb962ac59075b964b07152d234b70', '2022-05-06 09:42:56', 1, '2');
 
 
 -- -----------------------------------------------------
@@ -112,6 +106,14 @@ CREATE TABLE IF NOT EXISTS `turismo`.`tb_avaliacao` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
+
+--
+-- Extraindo dados da tabela `tb_avaliacao`
+--
+
+INSERT INTO `tb_avaliacao` (`ID`, `NOME`, `OPINIAO`, `AVALIACAO`, `tb_usuarios_ID`) VALUES
+(1, 'Juscelino', 'Incrível a facilidade em salvar um evento!', 4, NULL),
+(2, 'Boba Fett', 'Creio que ainda pode melhorar mais a estrutura do site', 2, NULL);
 
 
 -- -----------------------------------------------------
