@@ -26,7 +26,7 @@ class PontoDAO {
 
     public function findAll() {
         try {
-            $sql = "SELECT * FROM tb_eventos";
+            $sql = "SELECT * FROM tb_eventos WHERE capacidade < 2";
             $stmt = $this->pdo->prepare( $sql );
             $stmt->execute();
             $pontos = $stmt->fetchAll( PDO::FETCH_ASSOC );
