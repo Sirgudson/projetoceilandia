@@ -39,11 +39,11 @@
                 </tr>
                 <tr>
                     <td>Início:</td>
-                    <td><input type="datetime-local" name="inicio" id="inicio" value="<?php echo $evento["DATA_INICIO"] ?>" readonly></td>
+                    <td><input type="text" name="inicio" id="inicio" value="<?php echo $evento["DATA_INICIO"] ?>" readonly></td>
                 </tr>
                 <tr>
                     <td>Encerramento:</td>
-                    <td><input type="datetime-local" name="encerramento" id="encerramento" value="<?php echo $evento["DATA_TERMINO"] ?>" readonly></td>
+                    <td><input type="text" name="encerramento" id="encerramento" value="<?php echo $evento["DATA_TERMINO"] ?>" readonly></td>
                 </tr>
                 <tr>
                     <td>Capacidade:</td>

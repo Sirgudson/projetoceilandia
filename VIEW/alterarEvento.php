@@ -14,10 +14,10 @@
 
 <body>
 <?php
-require_once '../DAO/EventoDAO.php';
-$idEvento = $_GET["id"];
-$eventoDAO = new EventoDAO();
-$evento = $eventoDAO->findById( $idEvento );
+    require_once '../DAO/EventoDAO.php';
+    $idEvento  = $_GET["id"];
+    $eventoDAO = new EventoDAO();
+    $evento    = $eventoDAO->findById( $idEvento );
 
 ?>
     <div class="container-cadastro">
@@ -40,11 +40,11 @@ $evento = $eventoDAO->findById( $idEvento );
                 </tr>
                 <tr>
                     <td>Início:</td>
-                    <td><input type="datetime-local" name="inicio" id="inicio" value="<?php echo $evento["DATA_INICIO"] ?>"></td>
+                    <td><input type="text" name="inicio" id="inicio" value="<?php echo $evento["DATA_INICIO"] ?>"></td>
                 </tr>
                 <tr>
                     <td>Encerramento:</td>
-                    <td><input type="datetime-local" name="encerramento" id="encerramento" value="<?php echo $evento["DATA_TERMINO"] ?>"></td>
+                    <td><input type="text" name="encerramento" id="encerramento" value="<?php echo $evento["DATA_TERMINO"] ?>"></td>
                 </tr>
                 <tr>
                     <td>Capacidade:</td>
