@@ -475,6 +475,90 @@ input:-webkit-autofill
    
 }
 
+/* RESET PASSWORD */
+
+.ebcf_modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 80; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.ebcf_modal-content {
+    background-color: #ecf0f1;
+    margin: auto;
+    padding: 120px;
+    border: 1px solid #888;
+    width: 50%;
+    border-radius: 20px;
+}
+
+/* The Close Button */
+.ebcf_close {
+    color: #32bcf8;
+    float: right;
+    font-size: 38px;
+    font-weight: bold;
+    margin: -103px;
+}
+
+.ebcf_close:hover,
+.ebcf_close:focus {
+    color: #F8B86E;
+    text-decoration: none;
+    cursor: pointer;
+    margin: -103px;
+}
+.ebcf_modal-content h3 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 25px;
+    color: #6589FF;
+    text-align: center;
+}
+.ebcf_modal-content form {
+    margin-left: 90px;
+    margin-top: 20px;
+}
+.container-reset input[type=email] {
+    height: 45px;
+    width: 50%;
+    border: none;
+    background-color: #fff;
+}
+.label {
+    background-color: #fff;
+    width: 90%;
+}
+.container-reset2 {
+    display: flex;
+}
+.container-reset2 input[type=submit] {
+    background-image: linear-gradient(to right, #89CAFF, #6589FF);
+    display: block;
+    font-size: 1rem;
+    color: #fff;
+    margin-top: 20px;
+    cursor: pointer;
+    box-shadow: 0 5px 20px #89caff94;
+    transition: box-shadow .3s ease-in-out;
+    width: 40%;
+    height: 40px;
+    border: none;
+    margin: 20px 8px;
+}
+.container-reset2 a {
+    margin: 30px 80px;
+    text-decoration: none;
+}
+
 @media screen and (max-width: 740px) {
     .form {
         width: 50%;
