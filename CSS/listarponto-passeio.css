@@ -75,12 +75,14 @@
   margin-top: 6%;
   font-size: 18px;
   color: #666161c5;
-  line-height: 4px;
 }
-p.text_evento {
-  line-height: 22px !important;
+.text_evento {
+  line-height: 22px;
   margin-right: 70px;
   text-align: justify;
+}
+.descricao_evento {
+  line-height: 0;
 }
 .img-evento {
   border-radius: 1%;
