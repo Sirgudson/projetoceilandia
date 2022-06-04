@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/listarponto-passeio.css">
     <link rel="shortcut icon" href="../ASSETS/ICO/logo1.ico" type="image/x-icon">
     <link rel="stylesheet" href="../LIB/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
@@ -14,9 +15,9 @@
 
 <body>
     <!-- HEADER -->
-    <?php include 'header.php';?>
+    <?php include 'header-evento.php';?>
     <div class="apresentacao">
-        <h1 class="titulo">Passeio</h1>
+        <h1 class="titulo">Eventos</h1>
         <img src="../ASSETS/IMAGES/onda1.png" alt="onda1">
     </div>
     <div class="container-evento">
@@ -30,30 +31,32 @@
             foreach ( $eventos as $evento ) {
 
             ?>
+            <div class="box-login">
+
+            </div>
             <div class="box-evento">
-            <?php
-            echo "<div class='foto_evento' id='img-evento'>"; ?>
-                        <img src="../ASSETS/EVENTOS/foto/<?php echo $evento['FOTO'] ?>" alt="" width="550" height="500"/><?php
+
+            <img class="img-evento" src="../ASSETS/EVENTOS/foto/<?php echo $evento['FOTO'] ?>" alt="" width="350" height="450"/><?php
 
         echo "<div class='title_evento'>
                         <span>{$evento["TITULO"]}</span>";
 
-        echo "<p class='descricao_evento'>
+        echo "<p class='text_evento'>
                         {$evento["DESCRICAO"]}
                     </p>";
-        echo "<p class='capacidade_evento'>
-                        Capacidade: {$evento["CAPACIDADE"]} Pessoas
+        echo "<p class='descricao_evento'>
+                        <b>Capacidade:</b> {$evento["CAPACIDADE"]} Pessoas
                     </p>";
 
         echo "<p class='descricao_evento'>
-                        Localização: {$evento["LOCAL"]}
+                        <b>Localização:</b> {$evento["LOCAL"]}
                     </p>";
-        echo "<p class='inicio_evento'>
-                        Quando começa: ", date( "d/m/Y H:i:s", strtotime( $evento["DATA_INICIO"] ) ),
+        echo "<p class='descricao_evento'>
+                        <b>Início</b>: ", date( "d/m/Y H:i:s", strtotime( $evento["DATA_INICIO"] ) ),
 
             "</p>";
-        echo "<p class='termino_evento'>
-            Quando começa: ", date( "d/m/Y H:i:s", strtotime( $evento["DATA_TERMINO"] ) ),
+        echo "<p class='descricao_evento'>
+            <b>Fim:</b> ", date( "d/m/Y H:i:s", strtotime( $evento["DATA_TERMINO"] ) ),
 
             "</p>";
 
@@ -62,7 +65,6 @@
 
             "</p>";
 
-        echo "</div>";
         echo "</div>";
         echo "</div>";
         echo "</div>";
