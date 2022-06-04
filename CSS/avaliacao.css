@@ -39,33 +39,35 @@ ul {
 .avaliacao_label {
     padding: 5px 3px;
     font-size: 26px;
-    filter:grayscale(1);
+    /* filter:grayscale(1); */
     opacity:.7;
     cursor:pointer;
+    color:#d4d427;
 }
 .avaliacao_label.active {
-    filter:grayscale(0);
+    color: rgb(187, 175, 8);
+    /* filter:grayscale(0); */
 	opacity: 1;
 	transition: all 100ms ease;
 }
 .avaliacao_label:hover {
-    filter:grayscale(.84);
+    /* filter:grayscale(.84); */
     transform:scale(1.1);
     transition:100ms ease;
-    color: red;
+    color: rgb(201, 201, 96);
 }
 .comentario {
     width: 100%;
 	display:none;
 }
-
+label svg:nth-child(2) {
+    display: none;
+}
 .comentario textarea input {
     max-width: 300px;
     display: grid;
     margin: auto;
     width: 300px;
-    /* width:100%;
-    display:block;*/
     margin:.5em auto;
     padding: .5em;
     font-family: 'Raleway', sans-serif;
@@ -81,8 +83,6 @@ ul {
 }
 
 textarea {
-    /* height: 100px;
-    margin-bottom: 15px; */
     max-width: 300px;
     width: 100%;
     height: 100px;
@@ -94,8 +94,6 @@ textarea {
     font-family: 'Raleway', sans-serif;
 }
 .comentario input[type=text] {
-    /* height: 30px;
-    margin-bottom: 20px; */
     max-width: 300px;
     width: 100%;
     display: block;
@@ -119,27 +117,22 @@ textarea {
     height: 40px;
     border: none;
 }
-/*
-button:focus, button:active {
-    outline: 0;
+.listar-avaliacao h3 {
+    text-align: center;
+    font-size: 30px;
+    color: #4b70eb;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-transform: uppercase;
 }
-button {
-	color: lighten(#1f2024, 80%);
-	background-color: lighten(#1f2024, 50%);
-	border-radius: 3px;
-	font-family: 'Raleway', sans-serif;
-	border: 0;
-	padding: 9px 15px;
-	font-size: 15px;
+.box-listar {
+    background-color: #EFF0F4;
+    padding: 30px 0px 30px 30px;
+    margin: 40px auto;
+    width: 40%;
 }
-
-button.not-disabled {
-	color: white;
-	background-color: #32bcf8;
-	text-shadow: 0px 1px 1px darken(#32bcf8, 20%);
-	cursor: pointer;
+.box-listar span {
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    color: #6589FF;
+    font-weight: 600
 }
-button.not-disable:hover {
-	background-color: darken(#32bcf8, 10%);
-	transition: 100ms;
-}*/
