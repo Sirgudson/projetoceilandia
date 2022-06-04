@@ -92,6 +92,21 @@ class ClienteDAO {
         }
     }
 
+    public function updateSenha( ClienteDTO $clienteDTO ) {
+        try {
+            $sql = "UPDATE tb_usuarios SET "
+                . "password=? "
+                . "WHERE cpf=?";
+            $stmt = $this->pdo->prepare( $sql );
+            $stmt->bindValue( 1, $clienteDTO->getSenha() );
+            $stmt->bindValue( 2, $clienteDTO->getCpf() );
+            return $stmt->execute();
+
+        } catch ( PDOException $e ) {
+            echo "Erro ao atualizar: ", $e->getMessage();
+        }
+    }
+
     public function findByCpf( $cpf ) {
         try {
             $sql = "SELECT * FROM tb_usuarios WHERE cpf = ?";

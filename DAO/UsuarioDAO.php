@@ -23,6 +23,21 @@ class UsuarioDAO {
         }
     }
 
+    public function findByEmailCpf( $email, $cpf ) {
+        try {
+            $sql = "SELECT email, id, cpf FROM tb_usuarios "
+                . "WHERE email=? AND cpf=?";
+            $stmt = $this->pdo->prepare( $sql );
+            $stmt->bindValue( 1, $email );
+            $stmt->bindValue( 2, $cpf );
+            $stmt->execute();
+            $usuario = $stmt->fetch( PDO::FETCH_ASSOC );
+            return $usuario;
+        } catch ( PDOException $e ) {
+            $e->getMessage();
+        }
+    }
+
     public function deleteById( $idUsuario ) {
         try {
             $sql  = 'DELETE FROM tb_usuario WHERE id = ?';
