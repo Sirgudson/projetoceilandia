@@ -84,11 +84,15 @@
         <div class="ebcf_modal-content">
             <span class="ebcf_close">&times;</span>
             <h3>Reset sua senha!</h3>
-            <form action="/action_page.php" method="post">
+            <form action="../CONTROLLER/validaDadosController.php" method="post">
                 <div class="container-reset">
                     <label class="label label-input" for="uname">
                         <i class="far fa-envelope icon-modify"></i>
                         <input type="email" name="email" placeholder="E-mail" required>
+                    </label>
+                    <label class="label label-input" for="cpf">
+                        <i class="fa fa-id-badge icon-modify"></i>
+                        <input type="text" name="cpf" placeholder="CPF" required>
                     </label>
                 </div>
 
