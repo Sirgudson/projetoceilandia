@@ -476,7 +476,9 @@ input:-webkit-autofill
 }
 
 /* RESET PASSWORD */
-
+input:focus {
+    outline: 0;
+}
 .ebcf_modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
@@ -493,7 +495,7 @@ input:-webkit-autofill
 
 /* Modal Content */
 .ebcf_modal-content {
-    background-color: #ecf0f1;
+    background-color: #fff;
     margin: auto;
     padding: 120px;
     border: 1px solid #888;
@@ -527,14 +529,14 @@ input:-webkit-autofill
     margin-left: 40px;
     margin-top: 20px;
 }
-.container-reset input[type=email] {
+.container-reset input {
     height: 45px;
     width: 50%;
     border: none;
-    background-color: #fff;
+    background-color: #ecf0f1;
 }
 .label {
-    background-color: #fff;
+    background-color: #ecf0f1;
     width: 90%;
 }
 .container-reset2 {
@@ -555,7 +557,7 @@ input:-webkit-autofill
     margin: 20px 8px;
 }
 .container-reset2 a {
-    margin: 30px 80px;
+    margin: 30px 130px;
     text-decoration: none;
 }
 
