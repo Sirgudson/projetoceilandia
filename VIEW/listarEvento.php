@@ -34,14 +34,14 @@
 
     foreach ($eventos as $evento) {
         echo "<tr>";
-        echo "  <td> {$evento["LOCAL"]}</td>";
-        echo "  <td> {$evento["TITULO"]}</td>";
-        echo "  <td> {$evento["DESCRICAO"]} </td>";
-        echo "  <td> {$evento["DATA_INICIO"]} </td>";
-        echo "  <td> {$evento["DATA_TERMINO"]} </td>";
-        echo "  <td> {$evento["CAPACIDADE"]} </td>";
-        echo "  <td align='center'><a href='alterarEvento.php?id={$evento["ID"]}'><i class='icon fa-solid fa-pen-to-square'></a></i></td>";
-        echo "  <td align='center'><a href='../controller/excluirEventoController.php?id={$evento["ID"]}'><i class='delete fa-solid fa-trash-can'></a></i></td>";
+        echo "  <td class='normal'> {$evento["LOCAL"]}</td>";
+        echo "  <td class='normal'> {$evento["TITULO"]}</td>";
+        echo "  <td class='description'> {$evento["DESCRICAO"]} </td>";
+        echo "  <td class='normal'> {$evento["DATA_INICIO"]} </td>";
+        echo "  <td class='normal'> {$evento["DATA_TERMINO"]} </td>";
+        echo "  <td class='normal'> {$evento["CAPACIDADE"]} </td>";
+        echo "  <td class='normal align='center'><a href='alterarEvento.php?id={$evento["ID"]}'><i class='icon fa-solid fa-pen-to-square'></a></i></td>";
+        echo "  <td class='normal align='center'><a href='../controller/excluirEventoController.php?id={$evento["ID"]}'><i class='delete fa-solid fa-trash-can'></a></i></td>";
         echo "</tr>";
     }
     echo "</table>";

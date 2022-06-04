@@ -22,7 +22,7 @@
 ?>
     <div class="container-cadastro">
         <div class="cadastro-form cadastro-formEvento">
-        <img class="img-cadastro" src="../ASSETS/IMAGES/caixadagua-depois.webp" alt="">
+        <img class="img-cadastro" src="../ASSETS/EVENTOS/foto/<?php echo $evento["FOTO"] ?>" alt="">
         <form id="formCadastrarEvento" action="../CONTROLLER/alterarEventoController.php" enctype="multipart/form-data" method="post">
             <input type="hidden" name="idEvento" value="<?php echo $evento["ID"] ?>">
             <table>
@@ -36,7 +36,8 @@
                 </tr>
                 <tr>
                     <td>Descrição:</td>
-                    <td><input type="text" name="descricao" id="descricao" value="<?php echo $evento["DESCRICAO"] ?>"></td>
+                    <!-- <td><input type="text" name="descricao" id="descricao" value="<//?php echo $evento["DESCRICAO"] ?>"></td> -->
+                    <td><textarea name="descricao" id="descricao" cols="12" rows="6"><?php echo $evento["DESCRICAO"] ?></textarea></td>
                 </tr>
                 <tr>
                     <td>Início:</td>
@@ -49,9 +50,6 @@
                 <tr>
                     <td>Capacidade:</td>
                     <td><input type="text" name="capacidade" id="capacidade" value="<?php echo $evento["CAPACIDADE"] ?>"></td>
-                </tr>
-                <tr>
-                <td><img src="../ASSETS/EVENTOS/foto/<?php echo $evento["FOTO"] ?>" width="200"/></td>
                 </tr>
                 <tr>
                     <td>Foto:</td>
