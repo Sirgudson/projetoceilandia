@@ -37,7 +37,7 @@
                 <tr>
                     <td>Descrição:</td>
                     <!-- <td><input type="text" name="descricao" id="descricao" value="<//?php echo $evento["DESCRICAO"] ?>"></td> -->
-                    <td><textarea name="descricao" id="descricao" cols="12" rows="6"><?php echo $evento["DESCRICAO"] ?></textarea></td>
+                    <td><textarea name="descricao" id="descricao" cols="12" rows="6" minlength="90"><?php echo $evento["DESCRICAO"] ?></textarea></td>
                 </tr>
                 <tr>
                     <td>Início:</td>

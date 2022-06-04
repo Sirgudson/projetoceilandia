@@ -98,6 +98,7 @@ p.text_evento {
   flex-direction: row-reverse;
   border-radius: 5px;
   padding: 50px;
+  gap: 40px;
 }
 .title_evento span {
   font-weight: 600;

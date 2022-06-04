@@ -28,7 +28,7 @@
                 </tr>
                 <tr>
                     <td><label for="descricao">Descrição do Evento:</label></td>
-                    <td><textarea type="text" name="descricao" id="descricao" cols="12" rows="6"></textarea></td>
+                    <td><textarea type="text" name="descricao" id="descricao" cols="12" rows="6" minlength="90" placeholder="No mínimo 90 caracteres" required></textarea></td>
                 </tr>
                 <tr>
                     <td><label for="descricao">Início do Evento:</label></td>
