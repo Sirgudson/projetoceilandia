@@ -87,7 +87,7 @@ $_SESSION['TIPO']="1"
       </li>
 
       <li>
-        <a href="#">
+        <a href="#" onclick="carregarIframe('listarAvaliacao.php')">
           <i class="fa fa-regular fa-star"></i>
           <span class="link_name">Avaliações</span>
         </a>
