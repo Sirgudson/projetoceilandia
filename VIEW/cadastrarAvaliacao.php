@@ -16,41 +16,6 @@
 </head>
 
 <body>
-    <!-- <fieldset>
-        <legend>Cadastrar Avaliação </legend>
-        <form id="formCadastrarAvaliacao" action="../controller/cadastrarAvaliacaoController.php" method="post">
-            <table>
-                <tr>
-                    <td><label for="nome">Seu Nome:</label></td>
-                    <td><input type="text" name="nome" id="nome"></td>
-                </tr>
-                <tr>
-                    <td><label for="opiniao">Descreva sua Opinião:</label></td>
-                    <td><input type="text" name="opiniao" id="opiniao"></td>
-                </tr>
-                <tr>
-                    <td><label for="descricao">Sua Avaliação:</label></td>
-                    <td><input type="radio" id="1" name="avaliacao" value="1">
-                    <label for="avaliacao">1</label></td>
-                    <td><input type="radio" id="2" name="avaliacao" value="2">
-                    <label for="avaliacao">2</label></td>
-                    <td><input type="radio" id="3" name="avaliacao" value="3">
-                    <label for="avaliacao">3</label></td>
-                    <td><input type="radio" id="4" name="avaliacao" value="4">
-                    <label for="avaliacao">4</label></td>
-                    <td><input type="radio" id="5" name="avaliacao" value="5">
-                    <label for="avaliacao">5</label></td>
-                </tr>
-
-                <tr>
-                    <td colspan="2">
-                        <input type="submit" value="Cadastrar">
-                    </td>
-                </tr>
-            </table>
-        </form>
-    </fieldset>
-    <div style="text-align: center;">-->
     <form id="formCadastrarAvaliacao" action="../controller/cadastrarAvaliacaoController.php" class="avaliacao" method="post">
         <h3 class="title_avaliacao">
             Avalie sua experiência em nosso site.
@@ -119,11 +84,6 @@
                 Nota: {$avaliacao["AVALIACAO"]}
             </p>";
             echo "</div>";
-            // echo "<tr>";
-            // echo "  <td> {$avaliacao["NOME"]}</td>";
-            // echo "  <td> {$avaliacao["OPINIAO"]}</td>";
-            // echo "  <td> {$avaliacao["AVALIACAO"]} </td>";
-            // echo "</tr>";
         }
         ?>
     <?php
@@ -133,7 +93,6 @@
     ?>
     </div>
     <script>
-        //querySelector('svg.fa-star') //trocar classe da star
         const avaliacoesInput = document.querySelectorAll(".avaliacao_input");
         const avaliacoesLabel = document.querySelectorAll(".avaliacao_label");
         avaliacoesInput.forEach(teste);
