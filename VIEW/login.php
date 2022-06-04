@@ -92,7 +92,7 @@
                     </label>
                     <label class="label label-input" for="cpf">
                         <i class="fa fa-id-badge icon-modify"></i>
-                        <input type="text" name="cpf" placeholder="CPF" id="cpf2" required>
+                        <input type="text" name="cpf" placeholder="CPF" maxlength="11" required>
                     </label>
                 </div>
 
@@ -142,9 +142,6 @@
     <script>
         $(document).ready(function() {
             $('#cpf').mask('000.000.000-00');
-        });
-        $(document).ready(function() {
-            $('#cpf2').mask('000.000.000-00');
         });
     </script>
     <script>
