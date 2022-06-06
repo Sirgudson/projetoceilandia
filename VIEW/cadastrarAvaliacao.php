@@ -86,11 +86,11 @@
             echo "</div>";
         }
         ?>
-    <?php
-    if (isset($_GET["msg"])) {
-        echo $_GET["msg"];
-    }
-    ?>
+        <?php
+        if (isset($_GET["msg"])) {
+            echo $_GET["msg"];
+        }
+        ?>
     </div>
     <script>
         const avaliacoesInput = document.querySelectorAll(".avaliacao_input");

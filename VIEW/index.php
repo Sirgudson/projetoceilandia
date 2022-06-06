@@ -75,7 +75,7 @@
                 <p class="titulo-equipe2">Sobre Nós :)</p>
                 <img src="../ASSETS/IMAGES/separador-laranja.png" alt="separador laranja" class="separador5">
                 <p class="paragrafo-equipe">
-                    Dhimylee, Marcelo e Nadir.  Estudantes da Escola Técnica da Ceilândia e criadores do Turismo Candango: Projeto Ceilândia. Através do nosso sistema web, iremos mostrar a importância da Ceilândia para o turismo cultural.
+                    Dhimylee, Marcelo e Nadir. Estudantes da Escola Técnica da Ceilândia e criadores do Turismo Candango: Projeto Ceilândia. Através do nosso sistema web, iremos mostrar a importância da Ceilândia para o turismo cultural.
                 </p>
             </div>
         </div>

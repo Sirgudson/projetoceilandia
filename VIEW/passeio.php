@@ -32,46 +32,42 @@
             foreach ( $eventos as $evento ) {
 
             ?>
-            <div class="box-login">
-
-            </div>
-            <div class="box-evento">
-
+        <div class="box-evento">
             <img class="img-evento" src="../ASSETS/EVENTOS/foto/<?php echo $evento['FOTO'] ?>" alt="" width="350" height="450"/><?php
 
-        echo "<div class='title_evento'>
+            echo "<div class='title_evento'>
                         <span>{$evento["TITULO"]}</span>";
 
-        echo "<p class='text_evento'>
+            echo "<p class='text_evento'>
                         {$evento["DESCRICAO"]}
                     </p>";
-        echo "<p class='descricao_evento'>
+            echo "<p class='descricao_evento'>
                         <b>Capacidade:</b> {$evento["CAPACIDADE"]} Pessoas
                     </p>";
 
-        echo "<p class='descricao_evento'>
+            echo "<p class='descricao_evento'>
                         <b>Localização:</b> {$evento["LOCAL"]}
                     </p>";
-        echo "<p class='descricao_evento'>
+            echo "<p class='descricao_evento'>
                         <b>Início</b>: ", date( "d/m/Y H:i:s", strtotime( $evento["DATA_INICIO"] ) ),
 
             "</p>";
-        echo "<p class='descricao_evento'>
+            echo "<p class='descricao_evento'>
             <b>Fim:</b> ", date( "d/m/Y H:i:s", strtotime( $evento["DATA_TERMINO"] ) ),
 
             "</p>";
 
-        echo "<p class='agendar'>
+            echo "<p class='agendar'>
             <a href='agendamento.php?id={$evento['ID']}'>Agendar </a>",
 
             "</p>";
 
-        echo "</div>";
-        echo "</div>";
-        echo "</div>";
+            echo "</div>";
+            echo "</div>";
+            echo "</div>";
     }
 ?>
-            </div>
+        </div>
     </div>
 
 

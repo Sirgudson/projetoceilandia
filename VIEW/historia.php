@@ -95,7 +95,6 @@
                 <img src="../ASSETS/IMAGES/IMG-61.jpg" alt="">
                 <img src="../ASSETS/IMAGES/agora.jpeg" alt="">
                 <img src="../ASSETS/IMAGES/IMG-71.jpeg" alt="Estádio Regional de Ceilândia, conhecido como Abadião">
-                
             </div>
         </div>
     </div>

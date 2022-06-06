@@ -11,7 +11,7 @@ img.avatar {
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.344);
   border-radius: 50%;
 }
-
+/* ------ PAGE PONTO TURISTICO ------ */
 .box-ponto {
   width: 1300px;
   height: 100%;
@@ -24,7 +24,6 @@ img.avatar {
   padding: 50px;
   gap: 40px;
 }
-
 /*#img-ponto {
   margin: 5%;
   border-radius: 8%;
@@ -58,20 +57,7 @@ img.avatar {
   }
 }
 
-/* ------ PAGE PONTO TURISTICO ------ */
-/* .box-login{
-    width: 1300px;
-    height: 100%;
-    margin: auto;
-    margin-top: 2%;
-    margin-bottom: 4%;
-    background-color: #EFF0F4;
-    display: flex;
-    flex-direction: row-reverse;
-    border-radius: 5px;
-    padding: 50px;
-} */
-
+/* ------ PAGE EVENTO ------ */
 .title_evento {
   font-family: 'Raleway', sans-serif;
   margin: 3%;
@@ -98,7 +84,7 @@ img.avatar {
   width: 1300px;
   height: 100%;
   margin: auto;
-  margin-top: -2%;
+  margin-top: -3%;
   margin-bottom: 4%;
   background-color: #EFF0F4;
   display: flex;
@@ -121,6 +107,5 @@ img.avatar {
   font-size: 20px;
   font-family: 'Raleway', sans-serif;
   text-transform: uppercase;
-  
 }
 
