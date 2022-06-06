@@ -98,7 +98,7 @@ img.avatar {
   width: 1300px;
   height: 100%;
   margin: auto;
-  margin-top: 2%;
+  margin-top: -2%;
   margin-bottom: 4%;
   background-color: #EFF0F4;
   display: flex;
