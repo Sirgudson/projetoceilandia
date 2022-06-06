@@ -1,11 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap');
 
-/* ------ PAGE PONTO TURISTICO ------ */
-/*.container-ponto{
-  display: grid;
-  grid-template-rows: auto;
-}*/
+/* ------ ICON LOGIN ------ */
+.imgcontainer {
+  text-align: center;
+}
+img.avatar {
+  width: 40px;
+  height: 40px; 
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.344);
+  border-radius: 50%;
+}
 
 .box-ponto {
   width: 1300px;

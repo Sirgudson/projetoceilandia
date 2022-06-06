@@ -47,7 +47,7 @@
             <div class="historia4">
                 <p>Venha conhecer um pouco mais da região mais amada do quadradinho, com eventos e passeios para toda família.</p>
                 <img src="../ASSETS/IMAGES/separador-laranja.png" alt="separador laranja" class="separador3">
-                <a href="#">AGENDAR</a>
+                <a href="../VIEW/passeio.php">AGENDAR</a>
             </div>
         </div>
 

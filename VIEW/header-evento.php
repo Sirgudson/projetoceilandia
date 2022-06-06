@@ -3,7 +3,11 @@
         <div class="d-none d-sm-block"><a href="../VIEW/historia.php">História</a></div>
         <div class="d-none d-sm-block"><a href="../VIEW/pontoturistico.php">Pontos Turísticos</a></div>
         <div class="d-none d-sm-block"><a href="../VIEW/contato.php">Contato</a></div>
-        <div><a href="../VIEW/passeio.php">LOGIN</a></div>
+        <div class="imgcontainer">
+            <a href="../VIEW/login.php"><img src="../ASSETS/IMAGES/user.svg" class="avatar" alt=""></a>
+        </div>
+        
+        
         <div class="menu d-block d-sm-none">
             <img src="../ASSETS/SVG/menu.svg" alt="menu">
         </div>
