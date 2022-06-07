@@ -25,6 +25,8 @@
 
         <?php
             require_once '../DAO/EventoDAO.php';
+            require_once '../DAO/UsuarioDAO.php';
+            session_start();
             include '../JS/funcao.php';
             $eventoDAO = new EventoDAO();
             $eventos   = $eventoDAO->findAll();
@@ -56,11 +58,15 @@
             <b>Fim:</b> ", date( "d/m/Y H:i", strtotime( $evento["DATA_TERMINO"] ) ),
 
             "</p>";
+            
+            if(isset($_SESSION['id']))
+            {
+                echo "<p class='agendar'>
+                <a href='agendamento.php?id={$evento['ID']}'>Agendar </a>",
 
-            echo "<p class='agendar'>
-            <a href='agendamento.php?id={$evento['ID']}'>Agendar </a>",
+                "</p>";
+            }
 
-            "</p>";
 
             echo "</div>";
             echo "</div>";
