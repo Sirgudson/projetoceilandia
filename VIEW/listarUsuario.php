@@ -18,7 +18,7 @@ include '../JS/funcao.php';
 $clienteDAO = new ClienteDAO();
 $usuarios = $clienteDAO->findAll();
 echo "<div class='container-list'>";
-echo "<h1><b>Usuários</b></h1>";
+echo "<h1><b>Usuários Ativos</b></h1>";
 echo "<table>";
 echo "  <tr>";
 echo "      <th>Editar</th>";

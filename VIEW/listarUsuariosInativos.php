@@ -18,7 +18,7 @@ include '../JS/funcao.php';
 $clienteDAO = new ClienteDAO();
 $usuarios = $clienteDAO->findAllInativos();
 echo "<div class='container-list'>";
-echo "<h1><b>Usuários Inativos do Sistema</b></h1>";
+echo "<h1><b>Usuários Inativos</b></h1>";
 echo "<table>";
 echo "  <tr>";
 echo "      <th>Nome</th>";
