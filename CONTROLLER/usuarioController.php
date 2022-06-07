@@ -15,7 +15,7 @@
         if ( $usuario['tipo'] == '1' ) {
             header( "Location: ../VIEW/admin.php" );
         } else if ( $usuario['tipo'] == '2' ) {
-            header( "Location: ../VIEW/pontoturistico.php" );
+            header( "Location: ../VIEW/passeio.php" );
         }
 
     } else {
