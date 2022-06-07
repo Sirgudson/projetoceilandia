@@ -10,7 +10,7 @@ class UsuarioDAO {
 
     public function findByEmailSenha( $email, $senha ) {
         try {
-            $sql = "SELECT email, id, tipo FROM tb_usuarios "
+            $sql = "SELECT email, id, tipo, ativo FROM tb_usuarios "
                 . "WHERE email=? AND password=?";
             $stmt = $this->pdo->prepare( $sql );
             $stmt->bindValue( 1, $email );

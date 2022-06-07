@@ -10,21 +10,33 @@
     $usuario    = $UsuarioDAO->findByEmailSenha( $email, $senha );
 
     if ( !empty( $usuario ) ) {
-        $_SESSION["id"] = $usuario["id"];
+            $_SESSION["id"] = $usuario["id"];
+            if ($usuario['ativo'] == '1'){
+                if ( $usuario['tipo'] == '1' ) {
+                        header( "Location: ../VIEW/admin.php" );
+                    } else if ( $usuario['tipo'] == '2' ) {
+                        header( "Location: ../VIEW/passeio.php" );
+                    }
+                
+                else {
+                ?>
+                <div class="alert alert-danger" role="alert">
+                    <p>Senha e/ou Email errado!</p>
 
-        if ( $usuario['tipo'] == '1' ) {
-            header( "Location: ../VIEW/admin.php" );
-        } else if ( $usuario['tipo'] == '2' ) {
-            header( "Location: ../VIEW/passeio.php" );
-        }
+                    Vamos tentar novamente? Redirecionando..
+                    <?php header( 'Refresh: 4; URL=http://localhost/projetoceilandia/VIEW/login.php' );?>
+                </div>
+                <?php
+    }}
+            elseif ($usuario['ativo'] == '0') {
+            ?>
+                <div class="alert alert-warning" role="alert">
+                    <p>Seu cadastro está Desativado!</p>
 
-    } else {
-    ?>
-    <div class="alert alert-danger" role="alert">
-        <p>Senha e/ou Email errado!</p>
+                    Gostaria de criar um novo? Redirecionando..
+                    <?php header( 'Refresh: 4; URL=http://localhost/projetoceilandia/VIEW/login.php' );?>
+                </div>
+            <?php
 
-        Vamos tentar novamente? Redirecionando..
-        <?php header( 'Refresh: 4; URL=http://localhost/projetoceilandia/VIEW/login.php' );?>
-  </div>
-  <?php
-  }
+            } 
+    }?>
