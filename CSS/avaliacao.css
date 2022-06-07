@@ -136,3 +136,60 @@ textarea {
     color: #6589FF;
     font-weight: 600
 }
+/* -------- PAGE CONTATO -------- */
+
+.container-contato {
+    width: 1300px;
+    height: 100%;
+    display: grid;
+    margin: auto;
+    background-color: #EFF0F4;
+    border-radius: 5px;
+    padding: 50px;
+    grid-template-columns: 35% 65%;
+    margin-top: -2%;
+}
+.contato {
+    padding: 0px 130px 0 0;
+    margin-left: 100px;
+    margin-top: 10%;
+    margin-bottom: 40%;
+}
+.contato h4 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 28px;
+    color: #666161;
+    line-height: 140%
+}
+.separador-contato {
+    margin-top: 25px;
+}
+.contato2 {
+    margin-top: 8%;
+}
+.form-contato {
+    margin-left: 50%;
+}
+.form-contato input {
+    height: 55px;
+    width: 77%;
+    margin-bottom: 15px;
+    border: none;
+    background-color: #d9d9df;
+    text-transform: uppercase;
+}
+.form-contato textarea {
+    margin-bottom: 15px;
+    border: none;
+    background-color: #d9d9df;
+    text-transform: uppercase;
+}
+.form-contato textarea:focus, input:focus {
+    outline: 0;
+}
+.form-contato button {
+    border: none;
+    margin-left: 60%;
+    text-transform: uppercase;
+    color: #26A999;
+}
