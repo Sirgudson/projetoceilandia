@@ -63,7 +63,11 @@
             {
                 echo "<p class='agendar'>
                 <a href='agendamento.php?id={$evento['ID']}'>Agendar </a>",
+                "</p>";
+            }else{
 
+                echo "<p class='agendar-else'>
+                <a href='login.php'>Faça login para agendar </a>",
                 "</p>";
             }
 
