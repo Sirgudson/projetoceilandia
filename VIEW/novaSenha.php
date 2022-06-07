@@ -30,7 +30,7 @@
                         <td><input type="email" name="nome" value="<?php echo $usuario["EMAIL"] ?>" readonly></td>
                     </tr>
                     <tr>
-                        <td>Senha:</td>
+                        <td>Nova senha:</td>
                         <td><input type="password" name="senha" id="senha" value="<?php echo $usuario["PASSWORD"] ?>" required></td>
                     </tr>
                     <tr>
